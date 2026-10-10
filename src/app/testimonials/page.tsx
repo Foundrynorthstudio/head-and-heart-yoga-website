@@ -51,7 +51,7 @@ export default function TestimonialsPage() {
           <Reveal delay={1}>
             <Link
               href="/book"
-              className="rounded-full bg-ink px-6 py-3 text-[0.78rem] tracking-[0.16em] text-white uppercase transition hover:bg-sage-deep"
+              className="btn"
             >
               Book a session
             </Link>

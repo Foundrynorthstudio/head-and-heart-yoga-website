@@ -101,7 +101,7 @@ export default function PracticePage() {
             </p>
             <Link
               href="/contact"
-              className="mt-8 inline-flex rounded-full bg-ink px-6 py-3 text-[0.78rem] tracking-[0.16em] text-white uppercase transition hover:bg-sage-deep"
+              className="btn mt-8"
             >
               Ask a question
             </Link>

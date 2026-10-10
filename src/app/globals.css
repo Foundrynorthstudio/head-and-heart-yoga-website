@@ -72,6 +72,40 @@ a {
   margin-inline: auto;
 }
 
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1.5px solid var(--rosewood);
+  background: #fff;
+  color: var(--rosewood);
+  padding: 0.72rem 1.3rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.btn:hover {
+  background: var(--rosewood);
+  color: #fff;
+}
+
+.btn-quiet {
+  border-color: color-mix(in srgb, var(--ink) 30%, white);
+  color: var(--ink);
+}
+
+.btn-quiet:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
 .section-pad {
   padding-block: clamp(4.5rem, 10vw, 7.5rem);
 }

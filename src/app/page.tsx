@@ -8,11 +8,11 @@ export default function HomePage() {
       <section className="relative h-[68vh] min-h-[460px] max-h-[680px] overflow-hidden">
         <div className="absolute inset-0 hero-media">
           <Image
-            src="/images/vicky-hero-center.jpg"
+            src="/images/vicky-hero-up.jpg"
             alt="Vicky teaching a class in front of a carved wooden panel"
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover object-[center_28%]"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(247,250,247,0.78)_0%,rgba(247,250,247,0.62)_46%,rgba(247,250,247,0.5)_100%)]" />
@@ -30,13 +30,13 @@ export default function HomePage() {
           <div className="hero-animate-delay-2 mt-6 flex flex-wrap items-center gap-3">
             <Link
               href="/book"
-              className="rounded-full bg-ink px-6 py-3 text-[0.78rem] tracking-[0.16em] text-white uppercase transition hover:bg-sage-deep"
+              className="btn"
             >
               Book a session
             </Link>
             <Link
               href="/practice"
-              className="rounded-full border border-ink/20 bg-white px-6 py-3 text-[0.78rem] tracking-[0.16em] text-ink uppercase transition hover:bg-sky-soft"
+              className="btn btn-quiet"
             >
               What to expect
             </Link>
@@ -89,7 +89,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/about"
-              className="mt-8 inline-flex rounded-full bg-white px-6 py-3 text-[0.78rem] tracking-[0.16em] text-ink uppercase transition hover:bg-sky-soft"
+              className="btn mt-8"
             >
               About Vicky
             </Link>
@@ -154,13 +154,13 @@ export default function HomePage() {
               <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
                 <Link
                   href="/book"
-                  className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-[0.78rem] tracking-[0.16em] text-ink uppercase transition hover:bg-sky-soft"
+                  className="btn"
                 >
                   View services
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-[0.78rem] tracking-[0.16em] text-white uppercase transition hover:bg-ink-soft"
+                  className="btn btn-quiet"
                 >
                   Contact
                 </Link>
