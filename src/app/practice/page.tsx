@@ -99,12 +99,14 @@ export default function PracticePage() {
               empowered and uplifted — free to have fun and, quite literally, go
               with the flow.
             </p>
-            <Link
-              href="/contact"
-              className="btn mt-8"
-            >
-              Ask a question
-            </Link>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/live" className="btn">
+                Join Monday class
+              </Link>
+              <Link href="/book/private" className="btn btn-quiet">
+                Book a private hour
+              </Link>
+            </div>
           </Reveal>
         </div>
       </section>

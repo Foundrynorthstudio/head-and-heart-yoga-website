@@ -14,9 +14,11 @@ export const site = {
     { href: "/", label: "Home" },
     { href: "/about", label: "About Vicky" },
     { href: "/practice", label: "The Practice" },
+    { href: "/live", label: "Live" },
+    { href: "/courses", label: "Courses" },
     { href: "/events", label: "Events" },
     { href: "/book", label: "Book" },
-    { href: "/testimonials", label: "Stories" },
+    { href: "/journal", label: "Journal" },
     { href: "/contact", label: "Contact" },
   ],
   giftCard: "https://www.headandheartyoga.com/gift-card",
@@ -76,8 +78,8 @@ export const events = [
     meta: "On demand · Introductory price £175, then £225",
     summary:
       "Practical lessons from the Yoga Sutras and the Bhagavad Gita for parents of teenagers, plus a one-hour grounding class, a 30-minute yoga nidra, and a short guide you can keep nearby. Watch as often as you like, with no expiry.",
-    href: "https://www.headandheartyoga.com/pg-13-landing",
-    cta: "PG-13 details",
+    href: "/courses#pg-13",
+    cta: "View the course",
   },
   {
     title: "Yoga — the practice of being human",
@@ -92,8 +94,8 @@ export const events = [
     meta: "Recorded workshop · Yoga philosophy, told through Star Wars",
     summary:
       "For anyone who thinks yoga philosophy isn’t for them. Storytelling, reflection, and the teachings — without the dusty lecture. Purchase stays on the original page, and Vicky sends the recording after payment.",
-    href: "https://www.headandheartyoga.com/maya-and-the-mask",
-    cta: "Maya and the Mask",
+    href: "/courses#maya",
+    cta: "View the course",
   },
 ] as const;
 

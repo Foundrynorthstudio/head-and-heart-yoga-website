@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { events } from "@/lib/site";
 
@@ -21,8 +22,9 @@ export default function EventsPage() {
               Workshops and courses
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-              Alongside weekly practice, Vicky teaches workshops and short
-              courses. Signup and payment stay on the original pages.
+              Workshops in the room, and courses you can start from here. If a
+              workshop is more than you want right now, the Monday class is £10
+              a week.
             </p>
           </Reveal>
         </div>
@@ -42,14 +44,29 @@ export default function EventsPage() {
                 <p className="mt-5 text-lg leading-relaxed text-ink-soft">
                   {event.summary}
                 </p>
-                <a
-                  href={event.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn mt-6"
-                >
-                  {event.cta}
-                </a>
+                {event.href.startsWith("/") ? (
+                  <Link href={event.href} className="btn mt-6">
+                    {event.cta}
+                  </Link>
+                ) : (
+                  <a
+                    href={event.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn mt-6"
+                  >
+                    {event.cta}
+                  </a>
+                )}
+                {event.href.startsWith("http") ? (
+                  <p className="mt-4 text-sm text-ink-soft">
+                    Not ready for a workshop?{" "}
+                    <Link href="/live" className="text-rosewood underline-offset-4 hover:underline">
+                      Join Monday Online Yoga Flow
+                    </Link>
+                    .
+                  </p>
+                ) : null}
               </article>
             </Reveal>
           ))}

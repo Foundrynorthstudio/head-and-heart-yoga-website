@@ -75,20 +75,25 @@ export default function AboutPage() {
         <div className="site-container flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <Reveal>
             <h2 className="font-display text-3xl md:text-4xl">
-              Want to know how classes feel?
+              Start where you are
             </h2>
             <p className="mt-3 max-w-xl text-ink-soft">
-              Read about the teaching style, who classes are for, and what to
-              expect on the mat.
+              Join the Monday class, book a private hour, or read how the
+              practice feels.
             </p>
           </Reveal>
           <Reveal delay={1}>
-            <Link
-              href="/practice"
-              className="btn"
-            >
-              The practice
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/live" className="btn">
+                Join Monday class
+              </Link>
+              <Link href="/book/private" className="btn btn-quiet">
+                Book a private hour
+              </Link>
+              <Link href="/practice" className="btn btn-quiet">
+                The practice
+              </Link>
+            </div>
           </Reveal>
         </div>
       </section>

@@ -29,19 +29,44 @@ export default function HomePage() {
             your pace, and a deeper understanding of mind and self.
           </p>
           <div className="hero-animate-delay-2 mt-6 flex flex-wrap items-center gap-3">
-            <Link
-              href="/book"
-              className="btn"
-            >
+            <Link href="/live" className="btn">
+              Join Monday class
+            </Link>
+            <Link href="/book" className="btn btn-quiet">
               Book a session
             </Link>
-            <Link
-              href="/practice"
-              className="btn btn-quiet"
-            >
-              What to expect
-            </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="section-pad pb-0">
+        <div className="site-container grid gap-6 md:grid-cols-3">
+          {[
+            {
+              href: "/live",
+              title: "Monday Online Yoga Flow",
+              body: "One live class a week. £10, until you cancel.",
+            },
+            {
+              href: "/courses",
+              title: "Courses",
+              body: "PG-13 and Maya and the Mask, in your own time.",
+            },
+            {
+              href: "/book/private",
+              title: "A private hour",
+              body: "One hour on Zoom, shaped around you. £60.",
+            },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="rounded-[1.5rem] border border-sage/20 bg-white/70 px-6 py-7 transition hover:border-rosewood"
+            >
+              <h2 className="font-display text-2xl">{item.title}</h2>
+              <p className="mt-3 text-ink-soft">{item.body}</p>
+            </Link>
+          ))}
         </div>
       </section>
 
@@ -181,17 +206,11 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={1}>
               <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
-                <Link
-                  href="/book"
-                  className="btn"
-                >
-                  View services
+                <Link href="/live" className="btn">
+                  Join Monday class
                 </Link>
-                <Link
-                  href="/contact"
-                  className="btn btn-quiet"
-                >
-                  Contact
+                <Link href="/book/private" className="btn btn-quiet">
+                  Book a private hour
                 </Link>
               </div>
             </Reveal>
