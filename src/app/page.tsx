@@ -5,38 +5,38 @@ import { Reveal } from "@/components/Reveal";
 export default function HomePage() {
   return (
     <>
-      <section className="relative min-h-[100svh] overflow-hidden">
+      <section className="relative h-[68vh] min-h-[460px] max-h-[680px] overflow-hidden">
         <div className="absolute inset-0 hero-media">
           <Image
-            src="/images/hero-practice.jpg"
-            alt="Hands resting in a quiet yoga practice"
+            src="/images/vicky-class.jpg"
+            alt="Vicky teaching a class in front of a carved wooden panel"
             fill
             priority
-            className="object-cover object-[center_55%]"
+            className="object-cover object-[center_32%]"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(247,250,247,0.2)_0%,rgba(28,36,33,0.08)_42%,rgba(28,36,33,0.72)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(247,250,247,0.78)_0%,rgba(247,250,247,0.62)_46%,rgba(247,250,247,0.5)_100%)]" />
         </div>
 
-        <div className="site-container relative flex min-h-[100svh] flex-col justify-end pb-16 pt-32 md:pb-20">
-          <p className="hero-animate font-display text-[clamp(3.4rem,12vw,7.5rem)] leading-[0.92] tracking-[-0.03em] text-white">
+        <div className="site-container relative flex h-full flex-col justify-end pb-10 pt-28 md:pb-12">
+          <p className="hero-animate font-display text-[clamp(3rem,8vw,5.6rem)] leading-[0.92] tracking-[-0.03em] text-ink">
             Head &amp; Heart
-            <span className="block text-[0.72em] text-sky-soft">Yoga</span>
+            <span className="block text-[0.72em] text-rosewood">Yoga</span>
           </p>
-          <p className="hero-animate-delay mt-5 max-w-xl text-lg leading-relaxed text-white/92 md:text-xl">
+          <p className="hero-animate-delay mt-4 max-w-xl text-lg leading-relaxed text-ink-soft md:text-xl">
             Inclusive classes in Stirling and online — shaped around your body,
             your pace, and a deeper understanding of mind and self.
           </p>
-          <div className="hero-animate-delay-2 mt-8 flex flex-wrap items-center gap-3">
+          <div className="hero-animate-delay-2 mt-6 flex flex-wrap items-center gap-3">
             <Link
               href="/book"
-              className="rounded-full bg-white px-6 py-3 text-[0.78rem] tracking-[0.16em] text-ink uppercase transition hover:bg-sky-soft"
+              className="rounded-full bg-rosewood px-6 py-3 text-[0.78rem] tracking-[0.16em] text-white uppercase transition hover:bg-rosewood-deep"
             >
               Book a session
             </Link>
             <Link
               href="/practice"
-              className="rounded-full border border-white/55 px-6 py-3 text-[0.78rem] tracking-[0.16em] text-white uppercase transition hover:bg-white/10"
+              className="rounded-full border border-ink/20 bg-white px-6 py-3 text-[0.78rem] tracking-[0.16em] text-ink uppercase transition hover:bg-sky-soft"
             >
               What to expect
             </Link>
