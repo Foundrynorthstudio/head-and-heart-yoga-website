@@ -15,10 +15,10 @@ export default function PracticePage() {
       <section className="relative min-h-[58vh] overflow-hidden pt-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/practice-alt.jpg"
-            alt="Quiet moment of yoga practice"
+            src="/images/studio-alt.jpg"
+            alt="Vicky sitting on her mat in the studio"
             fill
-            className="object-cover"
+            className="object-cover object-[center_70%]"
             sizes="100vw"
             priority
           />
