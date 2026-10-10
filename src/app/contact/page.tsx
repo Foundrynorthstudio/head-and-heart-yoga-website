@@ -38,8 +38,8 @@ export default function ContactPage() {
           </div>
           <div className="relative mt-10 hidden min-h-[280px] overflow-hidden rounded-[1.75rem] lg:block">
             <Image
-              src="/images/contact.jpg"
-              alt="Quiet workspace moment"
+              src="/images/practice-alt.jpg"
+              alt="Portrait of Vicky"
               fill
               className="object-cover"
               sizes="40vw"

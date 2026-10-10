@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CheckoutButton } from "@/components/CheckoutButton";
 import { formatPounds, products } from "@/lib/catalog";
 
@@ -31,7 +32,11 @@ export default function CoursesPage() {
             {products.pg13.name}
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-            {products.pg13.summary} The full price later is £225.
+            {products.pg13.summary} The full price later is £225.{" "}
+            <Link href="/events/pg-13" className="text-rosewood underline-offset-4 hover:underline">
+              Read the full story
+            </Link>
+            .
           </p>
           <ul className="mt-5 space-y-2 text-ink-soft">
             <li>One 1-hour grounding yoga class</li>
@@ -49,18 +54,12 @@ export default function CoursesPage() {
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-ink-soft">
             Yoga philosophy for anyone who thinks it isn’t for them, told
-            through a story you already know. There isn’t a current public
-            price on the new site, so purchase stays on Vicky’s existing page.
-            She emails the recording after payment.
+            through a story you already know. The recording link arrives by
+            email after you pay.
           </p>
-          <a
-            href="https://www.headandheartyoga.com/maya-and-the-mask"
-            target="_blank"
-            rel="noreferrer"
-            className="btn mt-6"
-          >
-            Maya and the Mask
-          </a>
+          <Link href="/events/maya" className="btn mt-6">
+            Read Maya and the Mask
+          </Link>
         </article>
       </div>
     </section>

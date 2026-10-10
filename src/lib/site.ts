@@ -64,41 +64,6 @@ export const testimonials = [
   },
 ] as const;
 
-export const events = [
-  {
-    title: "YOU-GA",
-    meta: "The Yoga Tree, Stirling · Saturday 24 October · 10am–12pm",
-    summary:
-      "A joyful two-hour mat workshop. Under the laughter, Vicky explores the Yoga Sutras and the Bhagavad Gita — letting go of how yoga is supposed to look, and finding a practice that belongs to you.",
-    href: "https://www.headandheartyoga.com/you-gaoct26",
-    cta: "YOU-GA details",
-  },
-  {
-    title: "PG-13: Parenting through a Yoga Lens",
-    meta: "On demand · Introductory price £175, then £225",
-    summary:
-      "Practical lessons from the Yoga Sutras and the Bhagavad Gita for parents of teenagers, plus a one-hour grounding class, a 30-minute yoga nidra, and a short guide you can keep nearby. Watch as often as you like, with no expiry.",
-    href: "/courses#pg-13",
-    cta: "View the course",
-  },
-  {
-    title: "Yoga — the practice of being human",
-    meta: "In person · 2 hours · No mat, no flexibility, no experience needed",
-    summary:
-      "A workshop that turns yoga philosophy into tools for everyday life: noticing a reaction, meeting change, and taking one meaningful step without waiting to feel certain.",
-    href: "https://www.headandheartyoga.com/thepracticeofbeinghuman",
-    cta: "Workshop details",
-  },
-  {
-    title: "Maya and the Mask",
-    meta: "Recorded workshop · Yoga philosophy, told through Star Wars",
-    summary:
-      "For anyone who thinks yoga philosophy isn’t for them. Storytelling, reflection, and the teachings — without the dusty lecture. Purchase stays on the original page, and Vicky sends the recording after payment.",
-    href: "/courses#maya",
-    cta: "View the course",
-  },
-] as const;
-
 export const supportLinks = [
   {
     name: "BACP",
