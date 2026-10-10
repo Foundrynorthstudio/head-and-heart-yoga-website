@@ -5,7 +5,7 @@ export const liveClass = {
   interval: "week" as const,
   timeLabel: "Time to be confirmed",
   summary:
-    "One live online class each week. £10, billed weekly, until you cancel. If you miss the class, a recording is sent within 48 hours.",
+    "One live online class each week. £10, billed weekly, until you cancel. If you miss the class, a recording is sent within 48 hours. Recordings of all Monday classes stay in the library while you are subscribed.",
 } as const;
 
 export const products = {
