@@ -42,6 +42,21 @@ export function Footer() {
               </a>
             </li>
             <li>
+              <Link href="/support" className="hover:text-white">
+                Further support
+              </Link>
+            </li>
+            <li>
+              <a
+                href={site.giftCard}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-white"
+              >
+                Gift card
+              </a>
+            </li>
+            <li>
               <a
                 href={site.social.instagram}
                 target="_blank"

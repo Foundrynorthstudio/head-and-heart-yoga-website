@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import { testimonials } from "@/lib/site";
 
 export default function HomePage() {
   return (
@@ -133,6 +134,34 @@ export default function HomePage() {
                   </p>
                 </div>
               </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad pt-0">
+        <div className="site-container">
+          <Reveal>
+            <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
+              Student stories
+            </p>
+            <h2 className="mt-3 max-w-2xl font-display text-[clamp(2.2rem,4vw,3.3rem)] leading-[1.08]">
+              Let’s hear from Vicky’s students
+            </h2>
+          </Reveal>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {testimonials.map((item) => (
+              <blockquote
+                key={item.name}
+                className="rounded-[1.5rem] bg-white/80 px-6 py-7 shadow-[0_16px_40px_rgba(28,36,33,0.05)]"
+              >
+                <p className="text-[1.02rem] leading-relaxed text-ink">
+                  “{item.quote}”
+                </p>
+                <footer className="mt-5 text-[0.78rem] tracking-[0.16em] text-rosewood uppercase">
+                  — {item.name}
+                </footer>
+              </blockquote>
             ))}
           </div>
         </div>

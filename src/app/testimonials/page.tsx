@@ -25,7 +25,7 @@ export default function TestimonialsPage() {
 
           <div className="mt-14 space-y-12">
             {testimonials.map((item, index) => (
-              <Reveal key={item.name} delay={(index + 1) as 1 | 2 | 3}>
+              <Reveal key={item.name} delay={([1, 2, 3, 3] as const)[index]}>
                 <blockquote className="border-l-2 border-sky pl-6 md:pl-8">
                   <p className="font-display text-[clamp(1.35rem,2.5vw,1.75rem)] leading-[1.45] text-ink">
                     “{item.quote}”
