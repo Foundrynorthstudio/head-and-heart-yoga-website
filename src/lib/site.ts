@@ -45,17 +45,17 @@ export const services = [
 export const testimonials = [
   {
     quote:
-      "Vicky is the best yoga teacher I have ever experienced and has put so much effort into continuing to teach during the current pandemic. Everyone is worthy in Vicky’s class, no one is treated differently because they wobble in balances or can’t manage poses and she offers lots of alternatives if you struggle. I was embarrassed, overweight and incredibly inflexible when I started her classes and, whilst I am still a l’il chunky, Vicky’s incredibly welcoming teaching style gave me confidence in yoga and her patience helped me master poses I never thought I could. She has significantly helped my mental and physical health and is 100% the reason I love yoga. If you are thinking of starting to practice, I cannot recommend a more chilled out and dedicated teacher and I cannot express how much she will help you in both body and mind.",
+      "Vicky is the best yoga teacher I have ever experienced. Everyone is worthy in her class, and she offers alternatives if you struggle.",
     name: "Leah",
   },
   {
     quote:
-      "After starting my journey as a yogi this year, I couldn’t have stumbled across a more kind and compassionate teacher. Vicky’s dedication to teaching and community was a shining light during the covid lockdown. I always knew I had my Tuesday morning class who were in this together. Vicky’s philosophy-first approach to practice has helped me to be more kind, caring and loving to myself. Vicky’s pushed my knowledge of mindfulness and spirituality through introducing me to the likes of Coral Brown. Her first-hand experience working with Alexandria Crow also shines through in her teaching. You can tell Vicky is a keen student herself. I’d thoroughly recommend Vicky as a teacher. You can tell she genuinely cares about her teaching and thrives on sharing her wisdom and experience with her students.",
+      "I couldn’t have found a kinder teacher. You can tell she genuinely cares, and she shares what she is still learning herself.",
     name: "David",
   },
   {
     quote:
-      "Vicky is the most amazing teacher. She is kind and cares so much about her students. She explains the postures so clearly in a calm, soothing voice. Yoga with Vicky is awesome.",
+      "She explains the postures so clearly, in a calm, soothing voice. Yoga with Vicky is awesome.",
     name: "Doreen",
   },
   {

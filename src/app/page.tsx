@@ -123,7 +123,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-pad">
+      <section className="pt-[clamp(4.5rem,10vw,7.5rem)] pb-8 md:pb-10">
         <div className="site-container">
           <Reveal>
             <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
@@ -174,16 +174,16 @@ export default function HomePage() {
               Let’s hear from Vicky’s students
             </h2>
           </Reveal>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory">
             {testimonials.map((item) => (
               <blockquote
                 key={item.name}
-                className="rounded-[1.5rem] bg-white/80 px-6 py-7 shadow-[0_16px_40px_rgba(28,36,33,0.05)]"
+                className="w-[min(18rem,78vw)] shrink-0 snap-start rounded-[1.5rem] bg-white/80 px-5 py-6 shadow-[0_16px_40px_rgba(28,36,33,0.05)]"
               >
                 <p className="text-[1.02rem] leading-relaxed text-ink">
                   “{item.quote}”
                 </p>
-                <footer className="mt-5 text-[0.78rem] tracking-[0.16em] text-rosewood uppercase">
+                <footer className="mt-4 text-[0.78rem] tracking-[0.16em] text-rosewood uppercase">
                   — {item.name}
                 </footer>
               </blockquote>
