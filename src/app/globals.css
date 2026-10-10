@@ -77,32 +77,38 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  border: 1.5px solid var(--rosewood);
-  background: #fff;
-  color: var(--rosewood);
-  padding: 0.72rem 1.3rem;
+  border: 2px solid var(--rosewood);
+  background-color: var(--rosewood);
+  color: #fff;
+  padding: 0.8rem 1.35rem;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   line-height: 1;
   text-transform: uppercase;
+  box-shadow: 0 8px 18px rgba(28, 36, 33, 0.18);
   transition:
     background-color 160ms ease,
-    color 160ms ease;
+    color 160ms ease,
+    border-color 160ms ease;
 }
 
 .btn:hover {
-  background: var(--rosewood);
+  background-color: var(--rosewood-deep);
+  border-color: var(--rosewood-deep);
   color: #fff;
 }
 
 .btn-quiet {
-  border-color: color-mix(in srgb, var(--ink) 30%, white);
+  border-color: var(--ink);
+  background-color: #fff;
   color: var(--ink);
+  box-shadow: 0 8px 18px rgba(28, 36, 33, 0.16);
 }
 
 .btn-quiet:hover {
-  background: var(--ink);
+  background-color: var(--ink);
+  border-color: var(--ink);
   color: #fff;
 }
 
