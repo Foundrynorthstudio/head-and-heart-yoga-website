@@ -50,7 +50,7 @@ export default function BookPage() {
                   </p>
                   <a
                     href={`${site.emailHref}&body=${encodeURIComponent(`Hi Vicky,%0A%0AI'd like to book: ${service.title}%0A%0A`)}`}
-                    className="mt-5 inline-flex rounded-full bg-rosewood px-5 py-2.5 text-[0.75rem] tracking-[0.14em] text-white uppercase transition hover:bg-rosewood-deep"
+                    className="mt-5 inline-flex rounded-full bg-ink px-5 py-2.5 text-[0.75rem] tracking-[0.14em] text-white uppercase transition hover:bg-sage-deep"
                   >
                     {service.cta}
                   </a>
@@ -101,7 +101,7 @@ export default function BookPage() {
           <Reveal delay={1}>
             <Link
               href="/contact"
-              className="rounded-full border border-rosewood/40 px-6 py-3 text-[0.78rem] tracking-[0.16em] text-rosewood uppercase transition hover:bg-rosewood hover:text-white"
+              className="rounded-full border border-ink/30 bg-white px-6 py-3 text-[0.78rem] tracking-[0.16em] text-ink uppercase transition hover:bg-ink hover:text-white"
             >
               Get in touch
             </Link>

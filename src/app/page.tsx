@@ -8,11 +8,11 @@ export default function HomePage() {
       <section className="relative h-[68vh] min-h-[460px] max-h-[680px] overflow-hidden">
         <div className="absolute inset-0 hero-media">
           <Image
-            src="/images/vicky-class.jpg"
+            src="/images/vicky-hero-center.jpg"
             alt="Vicky teaching a class in front of a carved wooden panel"
             fill
             priority
-            className="object-cover object-[center_32%]"
+            className="object-cover object-center"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(247,250,247,0.78)_0%,rgba(247,250,247,0.62)_46%,rgba(247,250,247,0.5)_100%)]" />
@@ -30,7 +30,7 @@ export default function HomePage() {
           <div className="hero-animate-delay-2 mt-6 flex flex-wrap items-center gap-3">
             <Link
               href="/book"
-              className="rounded-full bg-rosewood px-6 py-3 text-[0.78rem] tracking-[0.16em] text-white uppercase transition hover:bg-rosewood-deep"
+              className="rounded-full bg-ink px-6 py-3 text-[0.78rem] tracking-[0.16em] text-white uppercase transition hover:bg-sage-deep"
             >
               Book a session
             </Link>
@@ -46,7 +46,7 @@ export default function HomePage() {
 
       <section className="section-pad">
         <div className="site-container grid items-end gap-10 md:grid-cols-[1.1fr_0.9fr]">
-          <Reveal>
+          <div>
             <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
               Stirling &amp; Online
             </p>
@@ -54,14 +54,12 @@ export default function HomePage() {
               Practices as unique
               <span className="block text-rosewood">as you are</span>
             </h2>
-          </Reveal>
-          <Reveal delay={1}>
-            <p className="text-lg leading-relaxed text-ink-soft">
-              Your individuality sits at the heart of every class. We move and
-              adapt in ways that meet real bodies — deepening understanding of
-              mind and body, not chasing shapes on the mat.
-            </p>
-          </Reveal>
+          </div>
+          <p className="text-lg leading-relaxed text-ink-soft">
+            Your individuality sits at the heart of every class. We move and
+            adapt in ways that meet real bodies — deepening understanding of
+            mind and body, not chasing shapes on the mat.
+          </p>
         </div>
       </section>
 
@@ -91,7 +89,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/about"
-              className="mt-8 inline-flex rounded-full border border-white/50 px-6 py-3 text-[0.78rem] tracking-[0.16em] text-white uppercase transition hover:bg-white/10"
+              className="mt-8 inline-flex rounded-full bg-white px-6 py-3 text-[0.78rem] tracking-[0.16em] text-ink uppercase transition hover:bg-sky-soft"
             >
               About Vicky
             </Link>
@@ -162,7 +160,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-full border border-white/45 px-6 py-3 text-[0.78rem] tracking-[0.16em] text-white uppercase transition hover:bg-white/10"
+                  className="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-[0.78rem] tracking-[0.16em] text-white uppercase transition hover:bg-ink-soft"
                 >
                   Contact
                 </Link>

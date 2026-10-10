@@ -67,7 +67,7 @@ export function Header() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             href="/book"
-            className="rounded-full bg-rosewood px-5 py-2.5 text-[0.78rem] tracking-[0.14em] text-white uppercase transition-colors hover:bg-rosewood-deep"
+            className="rounded-full bg-ink px-5 py-2.5 text-[0.78rem] tracking-[0.14em] text-white uppercase transition-colors hover:bg-sage-deep"
           >
             Book a class
           </Link>
@@ -110,7 +110,7 @@ export function Header() {
           ))}
           <Link
             href="/book"
-            className="mt-2 mb-2 inline-flex items-center justify-center rounded-full bg-rosewood px-5 py-3 text-[0.78rem] tracking-[0.14em] text-white uppercase"
+            className="mt-2 mb-2 inline-flex items-center justify-center rounded-full bg-ink px-5 py-3 text-[0.78rem] tracking-[0.14em] text-white uppercase"
           >
             Book a class
           </Link>
