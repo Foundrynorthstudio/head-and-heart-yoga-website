@@ -39,7 +39,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-pad pb-0">
+      <section className="pt-8 pb-0 md:pt-10">
         <div className="site-container grid gap-6 md:grid-cols-3">
           {[
             {
@@ -50,7 +50,7 @@ export default function HomePage() {
             {
               href: "/courses",
               title: "Courses",
-              body: "PG-13 and Maya and the Mask, in your own time.",
+              body: "Browse my course and follow along in your own time.",
             },
             {
               href: "/book/private",
@@ -70,7 +70,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-pad">
+      <section className="pt-8 pb-[clamp(4.5rem,10vw,7.5rem)] md:pt-10">
         <div className="site-container grid items-end gap-10 md:grid-cols-[1.1fr_0.9fr]">
           <div>
             <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
