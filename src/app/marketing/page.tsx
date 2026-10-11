@@ -311,8 +311,8 @@ export default function MarketingPage() {
             From that bundle: one YouTube class in the library, two clips the
             same day, a journal post drafted for Thursday, and an email drafted
             for Friday. She approves in one reply, or it goes out as drafted if
-            she has not replied by Thursday evening. She does not write the post,
-            cut the film, or design the email.
+            she has not replied by Thursday evening. She doesn’t need to write
+            the post, cut the film, or design the email.
           </p>
         </section>
 
