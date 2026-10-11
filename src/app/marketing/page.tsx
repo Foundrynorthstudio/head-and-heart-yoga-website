@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Marketing",
@@ -120,6 +121,30 @@ const topics = [
   { group: "Place", items: ["A lay-by above Stirling", "The van in the rain", "A still loch before class"] },
   { group: "Teaching", items: ["The mat as a mirror", "Shame and the pose", "Love and light, plainly"] },
   { group: "Search", items: ["Online yoga Stirling", "Yoga for real bodies", "Yoga philosophy for beginners"] },
+];
+
+const accounts = [
+  {
+    name: "Instagram",
+    href: site.social.instagram,
+    handle: "@headandheartyoga",
+    size: "Followers and views are private until Insights is opened.",
+    note: "Best place for the two short clips. People already looking for yoga.",
+  },
+  {
+    name: "Facebook",
+    href: site.social.facebook,
+    handle: "Head & Heart Yoga",
+    size: "Page likes and reach are private until Insights is opened.",
+    note: "Worth one post of the same clip, for the people already following the page.",
+  },
+  {
+    name: "TikTok",
+    href: site.social.tiktok,
+    handle: "@headandheartyoga",
+    size: "390 followers. 1,535 accounts followed. 997 likes, public, October 2026.",
+    note: "A small account. The bio already points at the site. One clip a week is enough while the library is the main job.",
+  },
 ];
 
 export default function MarketingPage() {
@@ -328,6 +353,37 @@ export default function MarketingPage() {
               </article>
             ))}
           </div>
+        </section>
+
+        <section className="mt-16">
+          <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
+            The accounts
+          </p>
+          <h2 className="mt-3 font-display text-3xl">Small, and that is fine</h2>
+          <p className="mt-3 max-w-2xl text-ink-soft">
+            The job of a clip is a visit to the £10 class, not a follower count.
+            Instagram and Facebook hide their numbers. TikTok does not.
+          </p>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {accounts.map((account) => (
+              <article key={account.name} className="rounded-[1.25rem] bg-white/80 p-5">
+                <h3 className="font-display text-2xl">{account.name}</h3>
+                <a
+                  href={account.href}
+                  className="mt-2 block text-sm text-rosewood underline decoration-rosewood/30 underline-offset-4"
+                >
+                  {account.handle}
+                </a>
+                <p className="mt-4 text-sm leading-relaxed text-ink">{account.size}</p>
+                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{account.note}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-6 max-w-2xl text-ink-soft">
+            A quiet account with a class people can join beats a busy account
+            that never asks. The first month’s measure is the Insights numbers,
+            plus whether the weekly clips actually went out.
+          </p>
         </section>
 
         <section className="mt-16 grid gap-10 lg:grid-cols-2">
