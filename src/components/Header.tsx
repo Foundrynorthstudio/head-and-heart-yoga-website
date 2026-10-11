@@ -6,30 +6,20 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
 
+const headerNav = site.nav.filter(
+  (item) => item.href !== "/" && item.href !== "/book",
+);
+
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background,box-shadow,backdrop-filter] duration-300 ${
-        scrolled || open
-          ? "bg-[color-mix(in_srgb,var(--paper)_88%,transparent)] shadow-[0_1px_0_rgba(28,36,33,0.08)] backdrop-blur-md"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="fixed inset-x-0 top-0 z-50 bg-paper shadow-[0_1px_0_rgba(28,36,33,0.08)]">
       <div className="site-container flex items-center justify-between gap-4 py-3 md:py-4">
         <Link href="/" className="relative z-10 flex items-center gap-3">
           <Image
@@ -43,11 +33,9 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
-          {site.nav.map((item) => {
+          {headerNav.map((item) => {
             const active =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(item.href);
+              pathname === item.href || pathname.startsWith(`${item.href}/`);
             return (
               <Link
                 key={item.href}
@@ -67,7 +55,7 @@ export function Header() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             href="/book"
-            className="rounded-full bg-rosewood px-5 py-2.5 text-[0.78rem] tracking-[0.14em] text-white uppercase transition-colors hover:bg-rosewood-deep"
+            className="btn"
           >
             Book a class
           </Link>
@@ -99,7 +87,7 @@ export function Header() {
         className={`lg:hidden ${open ? "pointer-events-auto visible opacity-100" : "pointer-events-none invisible opacity-0"} absolute inset-x-0 top-full border-b border-[color-mix(in_srgb,var(--ink)_8%,transparent)] bg-paper/95 backdrop-blur-md transition-opacity`}
       >
         <nav className="site-container flex flex-col gap-1 py-4">
-          {site.nav.map((item) => (
+          {headerNav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -110,7 +98,7 @@ export function Header() {
           ))}
           <Link
             href="/book"
-            className="mt-2 mb-2 inline-flex items-center justify-center rounded-full bg-rosewood px-5 py-3 text-[0.78rem] tracking-[0.14em] text-white uppercase"
+            className="btn mt-2 mb-2"
           >
             Book a class
           </Link>

@@ -60,7 +60,7 @@ export function ContactForm() {
       </label>
       <button
         type="submit"
-        className="rounded-full bg-rosewood px-6 py-3 text-[0.78rem] tracking-[0.16em] text-white uppercase transition hover:bg-rosewood-deep"
+        className="btn"
       >
         Send message
       </button>

@@ -15,10 +15,10 @@ export default function PracticePage() {
       <section className="relative min-h-[58vh] overflow-hidden pt-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/practice-alt.jpg"
-            alt="Quiet moment of yoga practice"
+            src="/images/studio-alt.jpg"
+            alt="Vicky sitting on her mat in the studio"
             fill
-            className="object-cover"
+            className="object-cover object-[center_70%]"
             sizes="100vw"
             priority
           />
@@ -99,12 +99,14 @@ export default function PracticePage() {
               empowered and uplifted — free to have fun and, quite literally, go
               with the flow.
             </p>
-            <Link
-              href="/contact"
-              className="mt-8 inline-flex rounded-full bg-rosewood px-6 py-3 text-[0.78rem] tracking-[0.16em] text-white uppercase transition hover:bg-rosewood-deep"
-            >
-              Ask a question
-            </Link>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/live" className="btn">
+                Join Monday class
+              </Link>
+              <Link href="/book/private" className="btn btn-quiet">
+                Book a private hour
+              </Link>
+            </div>
           </Reveal>
         </div>
       </section>

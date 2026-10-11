@@ -20,6 +20,12 @@ export function Reveal({ children, className = "", delay }: RevealProps) {
       return;
     }
 
+    const rect = node.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      node.classList.add("is-visible");
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -27,7 +33,7 @@ export function Reveal({ children, className = "", delay }: RevealProps) {
           observer.disconnect();
         }
       },
-      { threshold: 0.18, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0, rootMargin: "0px 0px 12% 0px" },
     );
 
     observer.observe(node);

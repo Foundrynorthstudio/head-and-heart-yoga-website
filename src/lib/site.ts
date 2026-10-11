@@ -14,10 +14,14 @@ export const site = {
     { href: "/", label: "Home" },
     { href: "/about", label: "About Vicky" },
     { href: "/practice", label: "The Practice" },
+    { href: "/live", label: "Live" },
+    { href: "/courses", label: "Courses" },
+    { href: "/events", label: "Events" },
     { href: "/book", label: "Book" },
-    { href: "/testimonials", label: "Stories" },
+    { href: "/journal", label: "Journal" },
     { href: "/contact", label: "Contact" },
   ],
+  giftCard: "https://www.headandheartyoga.com/gift-card",
 } as const;
 
 export const services = [
@@ -41,7 +45,74 @@ export const services = [
 export const testimonials = [
   {
     quote:
-      "Vicky is the best yoga teacher I have ever experienced. Everyone is worthy in Vicky’s class — no one is treated differently because they wobble in balances or can’t manage poses, and she offers lots of alternatives if you struggle. She has significantly helped my mental and physical health and is 100% the reason I love yoga.",
+      "Vicky is the best yoga teacher I have ever experienced. Everyone is worthy in her class, and she offers alternatives if you struggle.",
     name: "Leah",
+  },
+  {
+    quote:
+      "I couldn’t have found a kinder teacher. You can tell she genuinely cares, and she shares what she is still learning herself.",
+    name: "David",
+  },
+  {
+    quote:
+      "She explains the postures so clearly, in a calm, soothing voice. Yoga with Vicky is awesome.",
+    name: "Doreen",
+  },
+  {
+    quote: "Friendly, life-enhancing yoga for real people.",
+    name: "Anonymous (Stirling)",
+  },
+] as const;
+
+export const supportLinks = [
+  {
+    name: "BACP",
+    detail: "Accredited counsellors and psychotherapists",
+    href: "https://www.bacp.co.uk/",
+  },
+  {
+    name: "NHS mental health helplines",
+    detail: "A list of helplines across the UK",
+    href: "https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/",
+  },
+  {
+    name: "Beat",
+    detail: "Support for eating disorders",
+    href: "https://www.beateatingdisorders.org.uk/",
+  },
+  {
+    name: "Breathing Space",
+    detail: "Support when you feel stressed or anxious",
+    href: "https://breathingspace.scot/information-support/your-mood/stressed-anxious/",
+  },
+  {
+    name: "SAMH",
+    detail: "Scottish Association for Mental Health",
+    href: "https://www.samh.org.uk/",
+  },
+  {
+    name: "Samaritans",
+    detail: "Someone to talk to, day or night",
+    href: "https://www.samaritans.org/?nation=scotland",
+  },
+  {
+    name: "Cruse Scotland",
+    detail: "Bereavement support",
+    href: "http://www.crusescotland.org.uk/",
+  },
+  {
+    name: "LGBT Foundation",
+    detail: "Support and information",
+    href: "https://lgbt.foundation/",
+  },
+  {
+    name: "Scottish Trans",
+    detail: "Support groups in Scotland",
+    href: "https://www.scottishtrans.org/support/support-groups-in-scotland/",
+  },
+  {
+    name: "Chartered Society of Physiotherapy",
+    detail: "Find a physiotherapist. Vicky teaches yoga; she is not a physiotherapist.",
+    href: "https://www.csp.org.uk/public-patient/find-physiotherapist",
   },
 ] as const;
