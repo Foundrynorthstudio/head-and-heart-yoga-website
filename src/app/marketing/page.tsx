@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Marketing",
   description:
-    "A draft growth plan for Head & Heart Yoga: the Central Belt, online teachers, a campervan Monday, and six months of steady work.",
+    "A draft growth plan for Head & Heart Yoga: the Central Belt, online teachers, a Wednesday class from the van, and six months of steady work.",
 };
 
 const studios = [
@@ -56,7 +56,7 @@ const teachers = [
 const months = [
   {
     month: "Month 1",
-    line: "Google profile, page titles, a newsletter list, four van Mondays, four posts.",
+    line: "Google profile, page titles, a newsletter list, four van Wednesdays, four posts.",
   },
   {
     month: "Month 2",
@@ -81,10 +81,10 @@ const months = [
 ];
 
 const week = [
-  { step: "Monday", title: "Van class", detail: "Live hour, outdoors when the weather allows." },
-  { step: "Monday", title: "Two clips", detail: "Short vertical films for Instagram and TikTok." },
-  { step: "Tuesday", title: "Journal", detail: "One post, written on the same day each week." },
-  { step: "Wednesday", title: "Email", detail: "Where the van was, one idea, one link." },
+  { step: "Wednesday", title: "Van class", detail: "Live midweek recharge, from wherever the van is parked." },
+  { step: "Wednesday", title: "Two clips", detail: "Short vertical films for Instagram and TikTok." },
+  { step: "Thursday", title: "Journal", detail: "One post, drafted from the voice note." },
+  { step: "Friday", title: "Email", detail: "Where the van was, one idea, one link." },
 ];
 
 const pieces = [
@@ -106,7 +106,7 @@ const pieces = [
 ];
 
 const subjects = [
-  "The view from this Monday",
+  "The view from this Wednesday",
   "What we kept, and what we left out",
   "A rope, not a snake",
   "Shame does not belong on the mat",
@@ -134,8 +134,9 @@ export default function MarketingPage() {
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
           This page is a briefing, not a finished campaign. It can leave the
-          menu when the meeting is done. The work is a live Monday class from
-          the van, a library of those classes, a weekly note, and a weekly post.
+          menu when the meeting is done. The Yoga Tree already fills Monday, so
+          this plan uses a Wednesday midweek recharge from the van, a library of
+          those classes, a weekly note, and a weekly post.
         </p>
 
         <section className="mt-16">
@@ -197,13 +198,96 @@ export default function MarketingPage() {
             ))}
           </div>
           <p className="mt-4 max-w-2xl text-sm text-ink-soft">
-            The class is filmed from the van, in a different bit of nearby wild
-            Scotland when the weather allows, and from the same reliable setup
-            when it does not. Recordings collect in the{" "}
+            Recordings collect in the{" "}
             <Link href="/live" className="text-rosewood underline-offset-4 hover:underline">
               class library
             </Link>
-            . Posts point back to the £10 class, not to a new offer.
+            . Posts point back to the £10 class, not to a new offer. The live
+            page can keep the name Monday Online Yoga Flow until the day is confirmed.
+          </p>
+        </section>
+
+        <section className="mt-16">
+          <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
+            The van
+          </p>
+          <h2 className="mt-3 font-display text-3xl">The van is the studio</h2>
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <article className="rounded-[1.25rem] bg-white/80 p-5">
+              <p className="text-[0.72rem] tracking-[0.14em] text-sage uppercase">Dry day</p>
+              <p className="mt-3 text-ink-soft">
+                Cameras and Vicky outside, with the landscape behind her.
+              </p>
+            </article>
+            <article className="rounded-[1.25rem] bg-white/80 p-5">
+              <p className="text-[0.72rem] tracking-[0.14em] text-sage uppercase">Wet day</p>
+              <p className="mt-3 text-ink-soft">
+                The wind-out awning stays out. Cameras sit inside the van, in the
+                dry, looking out. She practises on the mat in front of that
+                opening. The rain stays in the recording.
+              </p>
+            </article>
+          </div>
+          <ul className="mt-6 grid gap-3 md:grid-cols-3">
+            {[
+              "A full off-grid pack and inverter run the camera, the stream, and the lights without a hookup.",
+              "Starlink means the class can go out from a lay-by, a forestry track, or a beach with no phone signal.",
+              "Lights are for a flat day or shade under the awning. The place should still read as Scotland.",
+            ].map((item) => (
+              <li key={item} className="rounded-[1.25rem] border border-sage/25 p-5 text-sm leading-relaxed text-ink-soft">
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 max-w-2xl text-sm text-rosewood">
+            Wind that will not hold the awning is the only reason to move fully inside.
+          </p>
+        </section>
+
+        <section className="mt-16">
+          <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
+            £200 a month
+          </p>
+          <h2 className="mt-3 font-display text-3xl">What Vicky sends</h2>
+          <p className="mt-3 max-w-2xl text-ink-soft">
+            £200 covers editing, YouTube, the email, and posting. It does not
+            cover her showing up, or deciding what the class was about. The six
+            months only happen if the Wednesday bundle arrives.
+          </p>
+          <div className="mt-8 grid gap-4 lg:grid-cols-3">
+            <article className="rounded-[1.25rem] bg-white/80 p-5">
+              <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">Once</p>
+              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-ink-soft">
+                <li>Access to YouTube, Instagram, TikTok, the email tool, and the Google Business Profile.</li>
+                <li>Three photos she is happy to use.</li>
+                <li>A yes or no on her face, the van, and any place she will not name.</li>
+                <li>How the awning, the inverter, and the lights are stowed, so the wet-weather setup is the same each time.</li>
+              </ul>
+            </article>
+            <article className="rounded-[1.25rem] bg-white/80 p-5">
+              <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">Every Wednesday</p>
+              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-ink-soft">
+                <li>The raw class recording.</li>
+                <li>A phone clip of the place, even if it is only the van in the rain.</li>
+                <li>The place name, in a few words.</li>
+                <li>A voice note of two minutes at most: the one idea she wants people to remember.</li>
+              </ul>
+            </article>
+            <article className="rounded-[1.25rem] bg-white/80 p-5">
+              <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">Only when she has them</p>
+              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-ink-soft">
+                <li>A short quote a student sends her.</li>
+                <li>A change of date, price, or workshop.</li>
+                <li>Nothing else is required for the week to go out.</li>
+              </ul>
+            </article>
+          </div>
+          <p className="mt-6 max-w-2xl text-sm leading-relaxed text-ink-soft">
+            From that bundle: one YouTube class in the library, two clips the
+            same day, a journal post drafted for Thursday, and an email drafted
+            for Friday. She approves in one reply, or it goes out as drafted if
+            she has not replied by Thursday evening. She does not write the post,
+            cut the film, or design the email.
           </p>
         </section>
 
@@ -253,8 +337,7 @@ export default function MarketingPage() {
             </p>
             <h2 className="mt-3 font-display text-3xl">Eight first subjects</h2>
             <p className="mt-3 text-ink-soft">
-              One email a week, the morning after class. Where the van was, one
-              idea, one link.
+              One email a week, on Friday. Where the van was, one idea, one link.
             </p>
             <ol className="mt-6 space-y-2">
               {subjects.map((subject, index) => (
@@ -315,7 +398,7 @@ export default function MarketingPage() {
           </p>
           <h2 className="mt-3 font-display text-3xl">Three decisions</h2>
           <ol className="mt-6 space-y-3 text-lg">
-            <li>Van day, and a fixed indoor backup when the weather will not hold.</li>
+            <li>Wednesday for the live class, or another day that is not Monday.</li>
             <li>Which tool sends the weekly email.</li>
             <li>Which search phrase leads: online yoga Stirling, yoga for real bodies, or yoga philosophy for beginners.</li>
           </ol>
