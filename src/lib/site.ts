@@ -19,6 +19,7 @@ export const site = {
     { href: "/events", label: "Events" },
     { href: "/book", label: "Book" },
     { href: "/journal", label: "Journal" },
+    { href: "/marketing", label: "Marketing" },
     { href: "/contact", label: "Contact" },
   ],
   giftCard: "https://www.headandheartyoga.com/gift-card",
