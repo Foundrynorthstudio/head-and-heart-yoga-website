@@ -14,7 +14,6 @@ export const site = {
     { href: "/about", label: "About" },
     { href: "/live", label: "Weekly class" },
     { href: "/courses", label: "Courses" },
-    { href: "/community", label: "Community" },
     { href: "/events", label: "Events" },
     { href: "/marketing", label: "Marketing" },
   ],

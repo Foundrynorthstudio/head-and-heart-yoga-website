@@ -51,6 +51,16 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <Link
+            href="/community"
+            className={`btn btn-quiet ${
+              pathname === "/community" || pathname.startsWith("/community/")
+                ? "border-rosewood text-rosewood"
+                : ""
+            }`}
+          >
+            Community
+          </Link>
           <Link href="/live" className="btn">
             Join
           </Link>
@@ -91,9 +101,14 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <Link href="/live" className="btn mt-2 mb-2">
-            Join
-          </Link>
+          <div className="mt-2 mb-2 flex flex-wrap gap-3">
+            <Link href="/community" className="btn btn-quiet">
+              Community
+            </Link>
+            <Link href="/live" className="btn">
+              Join
+            </Link>
+          </div>
         </nav>
       </div>
     </header>
