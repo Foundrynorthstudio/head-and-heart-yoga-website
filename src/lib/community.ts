@@ -2,42 +2,54 @@ import { products } from "@/lib/catalog";
 
 export const libraryPreview = [
   {
+    slug: "steady-breath",
     title: "Weekly flow · Steady breath",
     date: "5 October 2026",
     length: "60 min",
     image: "/images/studio-alt.jpg",
   },
   {
+    slug: "soft-strength",
     title: "Weekly flow · Soft strength",
     date: "28 September 2026",
     length: "60 min",
     image: "/images/vicky-class.jpg",
   },
   {
+    slug: "quiet-hips",
     title: "Weekly flow · Quiet hips",
     date: "21 September 2026",
     length: "58 min",
     image: "/images/studio.jpg",
   },
   {
+    slug: "long-spine",
     title: "Weekly flow · Long spine",
     date: "14 September 2026",
     length: "61 min",
     image: "/images/session.jpg",
   },
   {
+    slug: "ease-in-the-shoulders",
     title: "Weekly flow · Ease in the shoulders",
     date: "7 September 2026",
     length: "60 min",
     image: "/images/vicky.jpg",
   },
   {
+    slug: "ground-and-rise",
     title: "Weekly flow · Ground and rise",
     date: "31 August 2026",
     length: "59 min",
     image: "/images/practice-alt.jpg",
   },
 ] as const;
+
+export const thisWeekClass = libraryPreview[0];
+
+export function libraryClass(slug: string) {
+  return libraryPreview.find((item) => item.slug === slug);
+}
 
 export type CommunityLesson = {
   slug: string;

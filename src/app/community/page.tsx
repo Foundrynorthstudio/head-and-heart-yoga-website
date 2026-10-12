@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { communityCourses, libraryPreview } from "@/lib/community";
+import { ThursdayCalendar } from "@/components/ThursdayCalendar";
+import { communityCourses, libraryPreview, thisWeekClass } from "@/lib/community";
 
 export const metadata: Metadata = {
   title: "Community",
@@ -81,8 +82,8 @@ export default function CommunityPage() {
                 Recorded at Vicky’s studio, then taught again on Thursday. Watch
                 live or later. The recording is made even if nobody is watching.
               </p>
-              <Link href="/live" className="btn mt-6">
-                Join for £10 a week
+              <Link href={`/community/class/${thisWeekClass.slug}`} className="btn mt-6">
+                This week’s class
               </Link>
             </article>
             <article className="rounded-[1.5rem] border border-sage/25 p-6">
@@ -91,19 +92,16 @@ export default function CommunityPage() {
               </p>
               <h3 className="mt-3 font-display text-3xl">Thursday at The Yoga Tree</h3>
               <p className="mt-3 text-ink-soft">
-                Eight spaces in Stirling. The £10 week includes a place when one
-                is free. An empty place can be booked as a one-off. The time is
-                still open, so a space is an enquiry.
+                Eight places each Thursday at The Yoga Tree. Pick a week.
               </p>
-              <Link href="/contact" className="btn mt-6">
-                Ask about a Thursday space
-              </Link>
+              <ThursdayCalendar />
             </article>
           </div>
           <div className="mt-8 flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory">
             {libraryPreview.map((item) => (
-              <article
-                key={item.date}
+              <Link
+                key={item.slug}
+                href={`/community/class/${item.slug}`}
                 className="w-[min(16rem,72vw)] shrink-0 snap-start overflow-hidden rounded-[1.25rem] bg-white shadow-[0_16px_40px_rgba(28,36,33,0.05)]"
               >
                 <div className="relative aspect-video">
@@ -124,7 +122,7 @@ export default function CommunityPage() {
                     Preview
                   </p>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
           <p className="mt-4 max-w-2xl text-sm text-ink-soft">

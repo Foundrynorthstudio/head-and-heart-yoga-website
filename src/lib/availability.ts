@@ -93,6 +93,37 @@ export function upcomingSlots(now = new Date(), taken: ReadonlySet<string> = new
   return slots;
 }
 
+export const THURSDAY_PLACES = 8;
+
+export function upcomingThursdays(now = new Date(), count = 6) {
+  const today = parts(now);
+  const slots: Slot[] = [];
+
+  for (let offset = 0; offset < HORIZON_DAYS && slots.length < count; offset += 1) {
+    const date = addCalendarDays(
+      Number(today.year),
+      Number(today.month),
+      Number(today.day),
+      offset,
+    );
+    const midday = londonDateTime(date.year, date.month, date.day, 12);
+    if (parts(midday).weekday !== "Thu") continue;
+    if (midday.getTime() <= now.getTime()) continue;
+    const key = `${date.year}-${String(date.month).padStart(2, "0")}-${String(date.day).padStart(2, "0")}`;
+    slots.push({
+      start: `thursday:${key}`,
+      timeLabel: "Class",
+      dayLabel: dayFormat.format(midday),
+    });
+  }
+
+  return slots;
+}
+
+export function isThursdayClass(start: string, now = new Date()) {
+  return upcomingThursdays(now, 8).some((slot) => slot.start === start);
+}
+
 export function isBookableSlot(start: string, now = new Date()) {
   const date = new Date(start);
   if (Number.isNaN(date.getTime()) || date.getTime() <= now.getTime()) return false;
