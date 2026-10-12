@@ -6,9 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
 
-const headerNav = site.nav.filter(
-  (item) => item.href !== "/" && item.href !== "/book",
-);
+const headerNav = site.headerNav;
 
 export function Header() {
   const pathname = usePathname();
@@ -53,11 +51,8 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Link
-            href="/book"
-            className="btn"
-          >
-            Book a class
+          <Link href="/live" className="btn">
+            Join
           </Link>
         </div>
 
@@ -96,11 +91,8 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <Link
-            href="/book"
-            className="btn mt-2 mb-2"
-          >
-            Book a class
+          <Link href="/live" className="btn mt-2 mb-2">
+            Join
           </Link>
         </nav>
       </div>

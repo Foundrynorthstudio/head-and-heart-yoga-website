@@ -10,18 +10,19 @@ export const site = {
     facebook: "https://www.facebook.com/headandheartyoga",
     tiktok: "https://www.tiktok.com/@headandheartyoga",
   },
-  nav: [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Vicky" },
-    { href: "/practice", label: "The Practice" },
-    { href: "/live", label: "Live" },
+  headerNav: [
+    { href: "/about", label: "About" },
+    { href: "/live", label: "Weekly class" },
     { href: "/courses", label: "Courses" },
     { href: "/community", label: "Community" },
     { href: "/events", label: "Events" },
-    { href: "/book", label: "Book" },
+  ],
+  footerNav: [
+    { href: "/practice", label: "The Practice" },
     { href: "/journal", label: "Journal" },
-    { href: "/marketing", label: "Marketing" },
     { href: "/contact", label: "Contact" },
+    { href: "/book", label: "Book a private hour" },
+    { href: "/marketing", label: "For Vicky" },
   ],
   giftCard: "https://www.headandheartyoga.com/gift-card",
 } as const;

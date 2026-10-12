@@ -18,7 +18,7 @@ export function Footer() {
             Explore
           </p>
           <ul className="mt-4 space-y-2 text-sm">
-            {site.nav.map((item) => (
+            {site.footerNav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
