@@ -16,6 +16,7 @@ export const site = {
     { href: "/practice", label: "The Practice" },
     { href: "/live", label: "Live" },
     { href: "/courses", label: "Courses" },
+    { href: "/community", label: "Community" },
     { href: "/events", label: "Events" },
     { href: "/book", label: "Book" },
     { href: "/journal", label: "Journal" },
