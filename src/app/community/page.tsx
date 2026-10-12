@@ -27,6 +27,47 @@ export default function CommunityPage() {
 
         <section className="mt-16">
           <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
+            The studio
+          </p>
+          <h2 className="mt-3 font-display text-3xl">Empty, until people are in it</h2>
+          <p className="mt-3 max-w-2xl text-ink-soft">
+            This is the gathering place for the £10 week and the eight at The
+            Yoga Tree. There are no notes yet, because there is no one here to
+            have written them.
+          </p>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <article className="rounded-[1.25rem] border border-dashed border-sage/40 p-5">
+              <p className="text-[0.72rem] tracking-[0.14em] text-sage uppercase">
+                This week’s practice
+              </p>
+              <p className="mt-3 font-display text-2xl">No note yet</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                When a class has been recorded, the one idea from it will sit here.
+              </p>
+            </article>
+            <article className="rounded-[1.25rem] border border-dashed border-sage/40 p-5">
+              <p className="text-[0.72rem] tracking-[0.14em] text-sage uppercase">
+                Thursday circle
+              </p>
+              <p className="mt-3 font-display text-2xl">Eight spaces open</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                The £10 week includes a place when one is free. No space has been taken on this page yet.
+              </p>
+            </article>
+            <article className="rounded-[1.25rem] border border-dashed border-sage/40 p-5">
+              <p className="text-[0.72rem] tracking-[0.14em] text-sage uppercase">
+                A place for a note
+              </p>
+              <p className="mt-3 font-display text-2xl">Nothing here</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                Student notes will appear when people are in the studio. None are invented.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section className="mt-16">
+          <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
             This week
           </p>
           <h2 className="mt-3 font-display text-3xl">The class, then the shelf</h2>
@@ -131,46 +172,6 @@ export default function CommunityPage() {
           </div>
         </section>
 
-        <section className="mt-16">
-          <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
-            The room
-          </p>
-          <h2 className="mt-3 font-display text-3xl">Empty, until people are in it</h2>
-          <p className="mt-3 max-w-2xl text-ink-soft">
-            This is the gathering place for the £10 week and the eight at The
-            Yoga Tree. There are no notes yet, because there is no one here to
-            have written them.
-          </p>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <article className="rounded-[1.25rem] border border-dashed border-sage/40 p-5">
-              <p className="text-[0.72rem] tracking-[0.14em] text-sage uppercase">
-                This week’s practice
-              </p>
-              <p className="mt-3 font-display text-2xl">No note yet</p>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                When a class has been recorded, the one idea from it will sit here.
-              </p>
-            </article>
-            <article className="rounded-[1.25rem] border border-dashed border-sage/40 p-5">
-              <p className="text-[0.72rem] tracking-[0.14em] text-sage uppercase">
-                Thursday circle
-              </p>
-              <p className="mt-3 font-display text-2xl">Eight spaces open</p>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                Subscribers are asked first. No space has been taken on this page yet.
-              </p>
-            </article>
-            <article className="rounded-[1.25rem] border border-dashed border-sage/40 p-5">
-              <p className="text-[0.72rem] tracking-[0.14em] text-sage uppercase">
-                A place for a note
-              </p>
-              <p className="mt-3 font-display text-2xl">Nothing here</p>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                Student notes will appear when people are in the room. None are invented.
-              </p>
-            </article>
-          </div>
-        </section>
       </div>
     </article>
   );
