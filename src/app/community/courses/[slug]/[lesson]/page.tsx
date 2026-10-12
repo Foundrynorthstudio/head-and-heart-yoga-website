@@ -55,18 +55,21 @@ async function LessonBody({
   if (!lesson) notFound();
 
   return (
-    <article className="section-pad pt-32 md:pt-40">
-      <div className="site-container">
+    <article className="bg-[#121816] pt-32 text-white md:pt-40">
+      <div className="site-container pb-20">
         <Link
-          href="/community"
-          className="text-[0.72rem] tracking-[0.16em] text-sage uppercase"
+          href="/courses"
+          className="text-[0.72rem] tracking-[0.16em] text-sky-soft uppercase"
         >
-          Community
+          All courses
         </Link>
-        <h1 className="mt-3 max-w-3xl font-display text-[clamp(2.4rem,5vw,3.6rem)] leading-[1.05]">
+        <p className="mt-6 text-[0.72rem] tracking-[0.16em] text-white/60 uppercase">
+          Vicky
+        </p>
+        <h1 className="mt-3 max-w-3xl font-display text-[clamp(2.6rem,5vw,4.4rem)] leading-[0.98]">
           {course.title}
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-ink-soft">{course.summary}</p>
+        <p className="mt-4 max-w-2xl text-lg text-white/75">{course.summary}</p>
         <CourseStage course={course} lesson={lesson} />
       </div>
     </article>
