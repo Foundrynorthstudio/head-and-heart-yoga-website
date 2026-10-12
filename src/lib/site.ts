@@ -16,13 +16,13 @@ export const site = {
     { href: "/courses", label: "Courses" },
     { href: "/community", label: "Community" },
     { href: "/events", label: "Events" },
+    { href: "/marketing", label: "Marketing" },
   ],
   footerNav: [
     { href: "/practice", label: "The Practice" },
     { href: "/journal", label: "Journal" },
     { href: "/contact", label: "Contact" },
     { href: "/book", label: "Book a private hour" },
-    { href: "/marketing", label: "For Vicky" },
   ],
   giftCard: "https://www.headandheartyoga.com/gift-card",
 } as const;
