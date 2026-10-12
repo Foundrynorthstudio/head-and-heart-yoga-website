@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Cursor's browser opens the forwarded dev server as 127.0.0.1.
-  allowedDevOrigins: ["127.0.0.1"],
+  // Cursor's browser reaches the dev server as 127.0.0.1 and as this VM's address.
+  allowedDevOrigins: ["127.0.0.1", "localhost", "172.30.0.2"],
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {
