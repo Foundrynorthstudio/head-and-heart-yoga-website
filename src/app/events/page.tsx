@@ -22,7 +22,7 @@ export default function EventsPage() {
               Workshops and courses
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-              One in-person gathering is offered each month. The full stories
+              Two in-person gatherings in the next six months. The full stories
               live here. If a workshop is more than you want right now, the
               weekly class is £10 a week.
             </p>

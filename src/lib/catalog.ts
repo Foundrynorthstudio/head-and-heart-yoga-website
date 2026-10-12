@@ -1,11 +1,11 @@
 export const liveClass = {
   id: "live",
-  name: "Weekly online class",
+  name: "Weekly class",
   pricePence: 1000,
   interval: "week" as const,
   timeLabel: "Recording day to be confirmed",
   summary:
-    "One class each week, recorded at Vicky’s studio, or from the van when she is away. £10, billed weekly, until you cancel. Watch live or later. The recording is made even if you miss it, and it stays in the library while you are subscribed. Subscribers are offered a Thursday space at The Yoga Tree before anyone else.",
+    "£10 a week covers the online class and a Thursday place at The Yoga Tree, when one of the eight is free. The class is recorded at Vicky’s studio, or from the van when she is away, even if nobody is watching. Watch live or later. The recording stays in the library while you are subscribed.",
 } as const;
 
 export const products = {

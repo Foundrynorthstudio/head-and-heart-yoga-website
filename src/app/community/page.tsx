@@ -37,9 +37,8 @@ export default function CommunityPage() {
               </p>
               <h3 className="mt-3 font-display text-3xl">Weekly online class</h3>
               <p className="mt-3 text-ink-soft">
-                Recorded at Vicky’s studio, or from the van when she is already
-                away. Watch live or later. The recording is made even if nobody
-                is watching. The day is still to be set.
+                Recorded at Vicky’s studio, then taught again on Thursday. Watch
+                live or later. The recording is made even if nobody is watching.
               </p>
               <Link href="/live" className="btn mt-6">
                 Join for £10 a week
@@ -47,13 +46,13 @@ export default function CommunityPage() {
             </article>
             <article className="rounded-[1.5rem] border border-sage/25 p-6">
               <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">
-                First pick
+                Included
               </p>
               <h3 className="mt-3 font-display text-3xl">Thursday at The Yoga Tree</h3>
               <p className="mt-3 text-ink-soft">
-                Eight spaces in Stirling. A £10 subscriber is offered one before
-                anyone else. The time and the price are still open, so a space
-                is an enquiry.
+                Eight spaces in Stirling. The £10 week includes a place when one
+                is free. An empty place can be booked as a one-off. The time is
+                still open, so a space is an enquiry.
               </p>
               <Link href="/contact" className="btn mt-6">
                 Ask about a Thursday space

@@ -45,7 +45,7 @@ export default function HomePage() {
             {
               href: "/live",
               title: "Weekly class and library",
-              body: "£10 a week. Watch live, or later, as the library grows.",
+              body: "£10 a week. Online, and a Thursday place when one of the eight is free.",
             },
             {
               href: "/courses",
@@ -54,8 +54,8 @@ export default function HomePage() {
             },
             {
               href: "/events",
-              title: "One event a month",
-              body: "An in-person gathering. Read what is coming.",
+              title: "Two gatherings",
+              body: "Two in-person events in the next six months. Read what is coming.",
             },
           ].map((item) => (
             <Link

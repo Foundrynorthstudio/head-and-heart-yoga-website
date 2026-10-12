@@ -6,9 +6,9 @@ import { formatPounds, liveClass } from "@/lib/catalog";
 import { libraryPreview } from "@/lib/community";
 
 export const metadata: Metadata = {
-  title: "Weekly online class",
+  title: "Weekly class",
   description:
-    "A weekly class recorded at Vicky’s studio. £10 a week. Watch live or later, and subscribers are offered Thursday at The Yoga Tree first.",
+    "£10 a week for the online class and a Thursday place at The Yoga Tree. Watch live or later.",
 };
 
 export default function LivePage() {
@@ -16,7 +16,7 @@ export default function LivePage() {
     <section className="section-pad pt-32 md:pt-40">
       <div className="site-container max-w-3xl">
         <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
-          Live class
+          Weekly class
         </p>
         <h1 className="mt-3 font-display text-[clamp(2.6rem,5vw,4rem)] leading-[1.05]">
           {liveClass.name}
@@ -28,9 +28,9 @@ export default function LivePage() {
           {formatPounds(liveClass.pricePence)} a week · {liveClass.timeLabel}
         </p>
         <ul className="mt-8 space-y-3 text-lg text-ink-soft">
-          <li>Recorded at her studio. From the van only when she is already away.</li>
-          <li>Watch live, or later in the library.</li>
-          <li>The class is recorded even if nobody is watching.</li>
+          <li>The same class is taught again on Thursday at The Yoga Tree.</li>
+          <li>Your £10 week includes a Thursday place when one of the eight is free.</li>
+          <li>Watch live, or later in the library. The class is recorded even if nobody is watching.</li>
           <li>Billed weekly until you cancel.</li>
         </ul>
         <div className="mt-8">
@@ -41,10 +41,9 @@ export default function LivePage() {
             Thursday at The Yoga Tree
           </p>
           <p className="mt-3 text-ink-soft">
-            Eight people can join Vicky in the room in Stirling. A subscriber is
-            asked first. When the spaces are gone, the stream is the way in.
-            The time is still to be set, and so is the price, so a space is an
-            enquiry for now.
+            Eight people in the room in Stirling. The £10 week includes a place
+            when one is free. An empty place can be booked as a one-off. The
+            time is still to be set, so a space is an enquiry for now.
           </p>
           <Link href="/contact" className="btn mt-5">
             Ask about a Thursday space
