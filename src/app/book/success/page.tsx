@@ -29,7 +29,7 @@ async function SuccessMessage({
         ? `${name} is confirmed. Vicky will email the details.`
         : "Vicky will email the details of your purchase."}{" "}
       {product === "live"
-        ? "The Monday class time will be in that note, and a missed class is recorded within 48 hours."
+        ? "The weekly class time will be in that note, and a missed class is recorded within 48 hours."
         : null}
       {product === "pg13" ? " The course lessons will arrive by email." : null}
       {product === "block"

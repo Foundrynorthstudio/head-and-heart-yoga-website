@@ -1,51 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { CheckoutButton } from "@/components/CheckoutButton";
 import { formatPounds, liveClass } from "@/lib/catalog";
-
-const library = [
-  {
-    title: "Monday Flow · Steady breath",
-    date: "5 October 2026",
-    length: "60 min",
-    image: "/images/studio-alt.jpg",
-  },
-  {
-    title: "Monday Flow · Soft strength",
-    date: "28 September 2026",
-    length: "60 min",
-    image: "/images/vicky-class.jpg",
-  },
-  {
-    title: "Monday Flow · Quiet hips",
-    date: "21 September 2026",
-    length: "58 min",
-    image: "/images/studio.jpg",
-  },
-  {
-    title: "Monday Flow · Long spine",
-    date: "14 September 2026",
-    length: "61 min",
-    image: "/images/session.jpg",
-  },
-  {
-    title: "Monday Flow · Ease in the shoulders",
-    date: "7 September 2026",
-    length: "60 min",
-    image: "/images/vicky.jpg",
-  },
-  {
-    title: "Monday Flow · Ground and rise",
-    date: "31 August 2026",
-    length: "59 min",
-    image: "/images/practice-alt.jpg",
-  },
-] as const;
+import { libraryPreview } from "@/lib/community";
 
 export const metadata: Metadata = {
-  title: "Monday Online Yoga Flow",
+  title: "Weekly online class",
   description:
-    "A weekly live online yoga class with Vicky. £10 a week, cancel any time.",
+    "A weekly class recorded at Vicky’s studio. £10 a week. Watch live or later, and subscribers are offered Thursday at The Yoga Tree first.",
 };
 
 export default function LivePage() {
@@ -65,23 +28,38 @@ export default function LivePage() {
           {formatPounds(liveClass.pricePence)} a week · {liveClass.timeLabel}
         </p>
         <ul className="mt-8 space-y-3 text-lg text-ink-soft">
-          <li>One live stream each week.</li>
+          <li>Recorded at her studio. From the van only when she is already away.</li>
+          <li>Watch live, or later in the library.</li>
+          <li>The class is recorded even if nobody is watching.</li>
           <li>Billed weekly until you cancel.</li>
-          <li>Miss the class and a recording arrives within 48 hours.</li>
         </ul>
         <div className="mt-8">
           <CheckoutButton product="live" label="Subscribe for £10 a week" />
         </div>
+        <article className="mt-10 rounded-[1.25rem] border border-sage/25 p-5">
+          <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">
+            Thursday at The Yoga Tree
+          </p>
+          <p className="mt-3 text-ink-soft">
+            Eight people can join Vicky in the room in Stirling. A subscriber is
+            asked first. When the spaces are gone, the stream is the way in.
+            The time is still to be set, and so is the price, so a space is an
+            enquiry for now.
+          </p>
+          <Link href="/contact" className="btn mt-5">
+            Ask about a Thursday space
+          </Link>
+        </article>
       </div>
 
       <div className="site-container mt-16">
         <h2 className="font-display text-3xl">Class library</h2>
         <p className="mt-3 max-w-2xl text-lg text-ink-soft">
-          Once you are subscribed, every Monday recording is here to watch
-          whenever you like.
+          This row is a preview of the shelf. Each real class is added the week
+          it is recorded, and it stays while you are subscribed.
         </p>
         <div className="mt-8 flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory">
-          {library.map((item) => (
+          {libraryPreview.map((item) => (
             <article
               key={item.date}
               className="w-[min(16rem,72vw)] shrink-0 snap-start overflow-hidden rounded-[1.25rem] bg-white shadow-[0_16px_40px_rgba(28,36,33,0.05)]"
@@ -94,11 +72,6 @@ export default function LivePage() {
                   className="object-cover"
                   sizes="256px"
                 />
-                <span className="absolute inset-0 flex items-center justify-center">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-rosewood shadow">
-                    <span className="ml-1 inline-block h-0 w-0 border-y-[7px] border-l-[12px] border-y-transparent border-l-current" />
-                  </span>
-                </span>
               </div>
               <div className="px-4 py-4">
                 <h3 className="font-display text-xl leading-tight">{item.title}</h3>
@@ -106,12 +79,15 @@ export default function LivePage() {
                   {item.date} · {item.length}
                 </p>
                 <p className="mt-3 text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">
-                  Included with your subscription
+                  Preview · included with a subscription
                 </p>
               </div>
             </article>
           ))}
         </div>
+        <Link href="/community" className="btn mt-8">
+          Open the community
+        </Link>
       </div>
     </section>
   );

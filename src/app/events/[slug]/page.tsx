@@ -70,7 +70,7 @@ export default async function EventDetailPage({
         <p className="mt-6 text-sm text-ink-soft">
           Not ready for this one?{" "}
           <Link href="/live" className="text-rosewood underline-offset-4 hover:underline">
-            Join Monday Online Yoga Flow
+            Join the weekly class
           </Link>
           .
         </p>

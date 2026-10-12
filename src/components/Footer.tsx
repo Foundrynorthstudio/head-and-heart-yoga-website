@@ -8,8 +8,8 @@ export function Footer() {
         <div>
           <p className="font-display text-3xl text-white">Head & Heart Yoga</p>
           <p className="mt-3 max-w-sm text-[0.95rem] leading-relaxed text-[color-mix(in_srgb,white_72%,transparent)]">
-            Inclusive, philosophy-rooted yoga with Vicky — taught online and from
-            a small home studio in Stirling, Scotland.
+            Inclusive, philosophy-rooted yoga with Vicky — online, and in
+            Stirling, Scotland.
           </p>
         </div>
 

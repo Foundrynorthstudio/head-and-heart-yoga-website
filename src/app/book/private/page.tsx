@@ -6,7 +6,7 @@ import { formatPounds, products } from "@/lib/catalog";
 export const metadata: Metadata = {
   title: "Book a private session",
   description:
-    "Reserve a one-hour online private yoga session with Vicky, Monday to Friday, 9am to 9pm.",
+    "Reserve a one-hour private yoga session with Vicky, on Zoom or at her home, Monday to Friday, 9am to 9pm.",
 };
 
 export default function PrivateBookingPage() {

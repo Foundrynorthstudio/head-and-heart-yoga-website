@@ -30,7 +30,7 @@ export default function HomePage() {
           </p>
           <div className="hero-animate-delay-2 mt-6 flex flex-wrap items-center gap-3">
             <Link href="/live" className="btn">
-              Join Monday class
+              Join the weekly class
             </Link>
             <Link href="/book" className="btn btn-quiet">
               Book a session
@@ -44,18 +44,18 @@ export default function HomePage() {
           {[
             {
               href: "/live",
-              title: "Monday Online Yoga Flow",
-              body: "One live class a week. £10, until you cancel.",
+              title: "Weekly class and library",
+              body: "£10 a week. Watch live, or later, as the library grows.",
             },
             {
               href: "/courses",
-              title: "Courses",
-              body: "Browse my course and follow along in your own time.",
+              title: "A course each month",
+              body: "Browse the course and follow along in your own time.",
             },
             {
-              href: "/book/private",
-              title: "A private hour",
-              body: "One hour on Zoom, shaped around you. £60.",
+              href: "/events",
+              title: "One event a month",
+              body: "An in-person gathering. Read what is coming.",
             },
           ].map((item) => (
             <Link
@@ -207,7 +207,7 @@ export default function HomePage() {
             <Reveal delay={1}>
               <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
                 <Link href="/live" className="btn">
-                  Join Monday class
+                  Join the weekly class
                 </Link>
                 <Link href="/book/private" className="btn btn-quiet">
                   Book a private hour

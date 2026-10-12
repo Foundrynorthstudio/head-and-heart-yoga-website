@@ -101,7 +101,7 @@ export default function PracticePage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/live" className="btn">
-                Join Monday class
+                Join the weekly class
               </Link>
               <Link href="/book/private" className="btn btn-quiet">
                 Book a private hour

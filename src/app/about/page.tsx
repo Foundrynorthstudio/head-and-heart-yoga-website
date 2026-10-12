@@ -78,14 +78,14 @@ export default function AboutPage() {
               Start where you are
             </h2>
             <p className="mt-3 max-w-xl text-ink-soft">
-              Join the Monday class, book a private hour, or read how the
+              Join the weekly class, book a private hour, or read how the
               practice feels.
             </p>
           </Reveal>
           <Reveal delay={1}>
             <div className="flex flex-wrap gap-3">
               <Link href="/live" className="btn">
-                Join Monday class
+                Join the weekly class
               </Link>
               <Link href="/book/private" className="btn btn-quiet">
                 Book a private hour

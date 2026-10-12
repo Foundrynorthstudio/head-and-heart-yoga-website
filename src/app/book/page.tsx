@@ -40,9 +40,10 @@ export default function BookPage() {
               Sessions shaped around you
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
-              Private hours and group events share one calendar: Monday to
-              Friday, 9am to 9pm, UK time. A paid hour is held for that booking
-              only.
+              A private hour can be on Zoom or at Vicky’s home. A group does not
+              come to the house. Private hours and hired groups share one
+              calendar: Monday to Friday, 9am to 9pm, UK time. A paid hour is
+              held for that booking only.
             </p>
           </Reveal>
         </div>

@@ -43,10 +43,10 @@ export default async function JournalPostPage({
         <div className="mt-12 border-t border-sage/25 pt-8">
           <h2 className="font-display text-3xl">Practise with Vicky</h2>
           <p className="mt-3 text-ink-soft">
-            Monday Online Yoga Flow is £10 a week, live online, until you cancel.
+            The weekly class is £10 a week, recorded at her studio, until you cancel.
           </p>
           <Link href="/live" className="btn mt-6">
-            Join Monday class
+            Join the weekly class
           </Link>
         </div>
       </div>

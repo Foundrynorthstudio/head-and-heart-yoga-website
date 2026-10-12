@@ -20,8 +20,13 @@ export default function CoursesPage() {
           Study in your own time
         </h1>
         <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-          Short courses you can return to. After payment, Vicky emails the
-          lessons. There is no login to manage.
+          A new short course is released once a month. PG-13 is the one you can
+          buy now. The lessons sit on a shelf in the{" "}
+          <Link href="/community" className="text-rosewood underline-offset-4 hover:underline">
+            community
+          </Link>
+          , in the manner of a class you can return to. After payment, Vicky
+          still emails the films, until they can play on that shelf.
         </p>
 
         <article id="pg-13" className="mt-14 border-t border-sage/25 pt-8">
@@ -43,8 +48,11 @@ export default function CoursesPage() {
             <li>One 30-minute yoga nidra</li>
             <li>A short guide to the yoga wisdom tools</li>
           </ul>
-          <div className="mt-6">
+          <div className="mt-6 flex flex-wrap gap-3">
             <CheckoutButton product="pg13" label="Buy PG-13" />
+            <Link href="/community/courses/pg-13" className="btn btn-quiet">
+              Open the lessons
+            </Link>
           </div>
         </article>
 
@@ -57,9 +65,14 @@ export default function CoursesPage() {
             through a story you already know. The recording link arrives by
             email after you pay.
           </p>
-          <Link href="/events/maya" className="btn mt-6">
-            Read Maya and the Mask
-          </Link>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link href="/community/courses/maya" className="btn">
+              Open the lesson
+            </Link>
+            <Link href="/events/maya" className="btn btn-quiet">
+              Read Maya and the Mask
+            </Link>
+          </div>
         </article>
       </div>
     </section>
