@@ -14,41 +14,47 @@ export const metadata: Metadata = {
 export default function LivePage() {
   return (
     <section className="section-pad pt-32 md:pt-40">
-      <div className="site-container max-w-3xl">
+      <div className="site-container">
         <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
           Weekly class
         </p>
-        <h1 className="mt-3 font-display text-[clamp(2.6rem,5vw,4rem)] leading-[1.05]">
+        <h1 className="mt-3 max-w-3xl font-display text-[clamp(2.6rem,5vw,4rem)] leading-[1.05]">
           {liveClass.name}
         </h1>
-        <p className="mt-5 text-lg leading-relaxed text-ink-soft">
+        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
           {liveClass.summary}
         </p>
-        <p className="mt-4 text-[0.78rem] tracking-[0.14em] text-rosewood uppercase">
-          {formatPounds(liveClass.pricePence)} a week · {liveClass.timeLabel}
-        </p>
-        <ul className="mt-8 space-y-3 text-lg text-ink-soft">
-          <li>The same class is taught again on Thursday at The Yoga Tree.</li>
-          <li>Your £10 week includes a Thursday place when one of the eight is free.</li>
-          <li>Watch live, or later in the library. The class is recorded even if nobody is watching.</li>
-          <li>Billed weekly until you cancel.</li>
-        </ul>
-        <div className="mt-8">
-          <CheckoutButton product="live" label="Subscribe for £10 a week" />
+        <div className="mt-10 grid items-stretch gap-4 lg:grid-cols-2">
+          <article className="rounded-[1.5rem] bg-white/80 p-6 md:p-8">
+            <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">
+              {formatPounds(liveClass.pricePence)} a week · {liveClass.timeLabel}
+            </p>
+            <h2 className="mt-3 font-display text-3xl">Watch, then catch up</h2>
+            <ul className="mt-5 space-y-3 text-ink-soft">
+              <li>The same class is taught again on Thursday at The Yoga Tree.</li>
+              <li>Watch live, or later in the library.</li>
+              <li>The class is recorded even if nobody is watching.</li>
+              <li>Billed weekly until you cancel.</li>
+            </ul>
+            <div className="mt-8">
+              <CheckoutButton product="live" label="Subscribe for £10 a week" />
+            </div>
+          </article>
+          <article className="rounded-[1.5rem] bg-sage-deep p-6 text-white md:p-8">
+            <p className="text-[0.72rem] tracking-[0.14em] text-sky-soft uppercase">
+              Only eight
+            </p>
+            <p className="mt-3 font-display text-7xl leading-none">8</p>
+            <h2 className="mt-4 font-display text-3xl">Thursday at The Yoga Tree</h2>
+            <p className="mt-3 max-w-md text-white/80">
+              Eight people in the room in Stirling. The £10 week includes a
+              place when one is free. An empty place can be booked as a one-off.
+            </p>
+            <Link href="/community" className="btn btn-quiet mt-8">
+              Ask about a Thursday space
+            </Link>
+          </article>
         </div>
-        <article className="mt-10 rounded-[1.25rem] border border-sage/25 p-5">
-          <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">
-            Thursday at The Yoga Tree
-          </p>
-          <p className="mt-3 text-ink-soft">
-            Eight people in the room in Stirling. The £10 week includes a place
-            when one is free. An empty place can be booked as a one-off. The
-            time is still to be set, so a space is an enquiry for now.
-          </p>
-          <Link href="/contact" className="btn mt-5">
-            Ask about a Thursday space
-          </Link>
-        </article>
       </div>
 
       <div className="site-container mt-16">
@@ -85,7 +91,7 @@ export default function LivePage() {
           ))}
         </div>
         <Link href="/community" className="btn mt-8">
-          Open the community
+          Join our community
         </Link>
       </div>
     </section>
