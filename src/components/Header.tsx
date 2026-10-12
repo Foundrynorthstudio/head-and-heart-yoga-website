@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { BasketLink } from "@/components/BasketLink";
 import { site } from "@/lib/site";
 
 const headerNav = site.headerNav;
@@ -51,6 +52,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <BasketLink />
           <Link
             href="/community"
             className={`btn btn-quiet ${
@@ -101,6 +103,7 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+          <BasketLink className="py-3" />
           <div className="mt-2 mb-2 flex flex-wrap gap-3">
             <Link href="/community" className="btn btn-quiet">
               Community

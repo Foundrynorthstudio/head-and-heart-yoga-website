@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckoutButton } from "@/components/CheckoutButton";
+import { AddToBasket } from "@/components/AddToBasket";
 import { communityCourses } from "@/lib/community";
 import { formatPounds, products } from "@/lib/catalog";
 
@@ -40,7 +40,7 @@ export default function CoursesPage() {
             {formatPounds(products.pg13.pricePence)} now · {featured.lessons.length} lessons
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <CheckoutButton product="pg13" label="Start this course" />
+            <AddToBasket product="pg13" />
             <Link href={`/community/courses/${featured.slug}`} className="btn btn-quiet">
               Watch the lessons
             </Link>

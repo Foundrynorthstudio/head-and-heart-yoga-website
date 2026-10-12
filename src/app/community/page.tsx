@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ThursdayCalendar } from "@/components/ThursdayCalendar";
+import { Yours } from "@/components/Yours";
 import { communityCourses, libraryPreview, thisWeekClass } from "@/lib/community";
 
 export const metadata: Metadata = {
@@ -25,6 +26,8 @@ export default function CommunityPage() {
           circle. A sign-in will keep it for members. For now the door is open,
           so you can look around.
         </p>
+
+        <Yours />
 
         <section className="mt-16">
           <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">

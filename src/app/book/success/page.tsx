@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
+import { RecordPurchase } from "@/components/RecordPurchase";
 import { liveClass, products, type CheckoutProduct } from "@/lib/catalog";
 
 export const metadata: Metadata = {
@@ -18,31 +19,45 @@ const names: Record<string, string> = {
 async function SuccessMessage({
   searchParams,
 }: {
-  searchParams: Promise<{ product?: string }>;
+  searchParams: Promise<{ product?: string; products?: string }>;
 }) {
-  const { product } = await searchParams;
-  const name = product ? names[product as CheckoutProduct] : undefined;
+  const params = await searchParams;
+  const list = (params.products ?? params.product ?? "")
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+  const product = list[0];
+  const name = list
+    .map((item) => names[item as CheckoutProduct])
+    .filter(Boolean)
+    .join(", ");
 
   return (
-    <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-      {name
-        ? `${name} is confirmed. Vicky will email the details.`
-        : "Vicky will email the details of your purchase."}{" "}
-      {product === "live"
-        ? "The weekly class time will be in that note, and a missed class is recorded within 48 hours."
-        : null}
-      {product === "pg13" ? " The course lessons will arrive by email." : null}
-      {product === "block"
-        ? " She will confirm the four session times with you."
-        : null}
-    </p>
+    <>
+      <RecordPurchase products={list.join(",")} />
+      <p className="mt-5 text-lg leading-relaxed text-ink-soft">
+        {name
+          ? `${name} is confirmed. It is waiting in the community.`
+          : "Vicky will email the details of your purchase."}{" "}
+        {product === "live"
+          ? "The weekly class time will be in that note, and a missed class is recorded within 48 hours."
+          : null}
+        {list.includes("pg13") ? " The course lessons will arrive by email." : null}
+        {list.includes("block")
+          ? " She will confirm the four session times with you."
+          : null}
+      </p>
+      <Link href="/community" className="btn mt-8">
+        Open the community
+      </Link>
+    </>
   );
 }
 
 export default function SuccessPage({
   searchParams,
 }: {
-  searchParams: Promise<{ product?: string }>;
+  searchParams: Promise<{ product?: string; products?: string }>;
 }) {
   return (
     <section className="section-pad pt-32 md:pt-40">
@@ -62,7 +77,7 @@ export default function SuccessPage({
         >
           <SuccessMessage searchParams={searchParams} />
         </Suspense>
-        <Link href="/" className="btn mt-8">
+        <Link href="/" className="mt-4 inline-block text-sm text-rosewood">
           Back home
         </Link>
       </div>

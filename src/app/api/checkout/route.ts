@@ -27,16 +27,23 @@ function originFrom(request: Request) {
 export async function POST(request: Request) {
   const body = (await request.json().catch(() => null)) as {
     product?: string;
+    items?: string[];
     slot?: string;
     location?: string;
   } | null;
 
-  if (!body || !body.product || !productIds.has(body.product as CheckoutProduct)) {
+  const fromBasket = Array.isArray(body?.items);
+  const requested = fromBasket ? body?.items ?? [] : body?.product ? [body.product] : [];
+  const items = requested.filter((item): item is CheckoutProduct =>
+    productIds.has(item as CheckoutProduct),
+  );
+
+  if (!body || items.length === 0) {
     return Response.json({ error: "Choose a product to continue." }, { status: 400 });
   }
 
-  const product = body.product as CheckoutProduct;
-  const needsSlot = product === "private" || product === "group";
+  const product = items[0];
+  const needsSlot = !fromBasket && (product === "private" || product === "group");
   const location = body.location?.trim();
 
   if (needsSlot) {
@@ -45,7 +52,7 @@ export async function POST(request: Request) {
     }
   }
 
-  if (product === "group" && !location) {
+  if (!fromBasket && product === "group" && !location) {
     return Response.json(
       { error: "Add where the group is meeting." },
       { status: 400 },
@@ -74,37 +81,37 @@ export async function POST(request: Request) {
   }
 
   const origin = originFrom(request);
-  const priced = product === "live" ? liveClass : products[product];
+  const hasLive = items.includes("live");
 
   try {
     const session = await stripe.checkout.sessions.create({
-      mode: product === "live" ? "subscription" : "payment",
+      mode: hasLive ? "subscription" : "payment",
       customer_email: undefined,
-      success_url: `${origin}/book/success?product=${product}`,
-      cancel_url:
-        product === "live"
+      success_url: `${origin}/book/success?products=${items.join(",")}`,
+      cancel_url: fromBasket
+        ? `${origin}/basket`
+        : product === "live"
           ? `${origin}/live`
           : product === "pg13"
             ? `${origin}/courses`
             : `${origin}/book/${product === "group" ? "group" : "private"}`,
       metadata: {
-        product,
+        product: items.join(","),
         bookingId: needsSlot ? bookingId : "",
         slot: body.slot ?? "",
       },
-      line_items: [
-        {
+      line_items: items.map((item) => {
+        const priced = item === "live" ? liveClass : products[item];
+        return {
           quantity: 1,
           price_data: {
             currency: "gbp",
             unit_amount: priced.pricePence,
             product_data: { name: priced.name },
-            ...(product === "live"
-              ? { recurring: { interval: "week" as const } }
-              : {}),
+            ...(item === "live" ? { recurring: { interval: "week" as const } } : {}),
           },
-        },
-      ],
+        };
+      }),
     });
 
     if (!session.url) {

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckoutButton } from "@/components/CheckoutButton";
-import { formatPounds, liveClass } from "@/lib/catalog";
+import { AddToBasket } from "@/components/AddToBasket";
+import { formatPounds, liveClass, products } from "@/lib/catalog";
 import { libraryPreview } from "@/lib/community";
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ export default function LivePage() {
               <li>Billed weekly until you cancel.</li>
             </ul>
             <div className="mt-8">
-              <CheckoutButton product="live" label="Subscribe for £10 a week" />
+              <AddToBasket product="live" />
             </div>
           </article>
           <article className="rounded-[1.5rem] bg-sage-deep p-6 text-white md:p-8">
@@ -53,6 +53,28 @@ export default function LivePage() {
             <Link href="/community" className="btn btn-quiet mt-8">
               Ask about a Thursday space
             </Link>
+          </article>
+        </div>
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          <article className="rounded-[1.5rem] border border-sage/25 p-6">
+            <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">
+              {formatPounds(products.private.pricePence)}
+            </p>
+            <h2 className="mt-3 font-display text-3xl">{products.private.name}</h2>
+            <p className="mt-3 text-ink-soft">{products.private.summary}</p>
+            <div className="mt-6">
+              <AddToBasket product="private" />
+            </div>
+          </article>
+          <article className="rounded-[1.5rem] border border-sage/25 p-6">
+            <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">
+              {formatPounds(products.group.pricePence)}
+            </p>
+            <h2 className="mt-3 font-display text-3xl">{products.group.name}</h2>
+            <p className="mt-3 text-ink-soft">{products.group.summary}</p>
+            <div className="mt-6">
+              <AddToBasket product="group" />
+            </div>
           </article>
         </div>
       </div>
