@@ -1,208 +1,109 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Marketing",
   description:
-    "A plain-language plan for Head & Heart Yoga: three offers, a Thursday class at The Yoga Tree, and a weekly recording from the home studio.",
+    "The six-month targets for Head & Heart Yoga: ten £10-a-week subscribers, a Thursday room of eight, and the weekly content that has to go out.",
 };
 
-const studios = [
+const targets = [
   {
-    name: "The Yoga Tree, Stirling",
-    does: "Hybrid studio and online classes at £7–£15. Monday morning yoga and Monday evening nidra are already £10.",
-    skip: "Do not add another Monday. Thursday, eight spaces, in their room.",
+    name: "Thursday",
+    line: "8 students in the room every week. Early weeks can be 2 or 4. The target is still 8.",
   },
   {
-    name: "Kings Park Yoga",
-    does: "Local blocks, and day retreats in the Trossachs.",
-    skip: "Do not compete on retreat catering. The van is the backdrop only on weeks she is already away.",
+    name: "Month 2",
+    line: "10 paying £10-a-week subscribers. In person and online are the same list. That is the first win.",
   },
   {
-    name: "The Yoga Room, Edinburgh",
-    does: "Term-based Ashtanga in a boutique room.",
-    skip: "Do not become a lineage school.",
+    name: "How the 10 arrive",
+    line: "About one or two new paying people a week for eight weeks. Not ten on day one.",
   },
   {
-    name: "Yoga Jo’s, Glasgow",
-    does: "A full studio, membership, and teacher training.",
-    skip: "Do not build a training school this year. The community area is the membership, and it stays small.",
-  },
-  {
-    name: "Kaliyoga, Linlithgow",
-    does: "Small local classes, including mum-and-baby and antenatal.",
-    skip: "Do not stretch into every specialist class.",
-  },
-];
-
-const teachers = [
-  {
-    name: "Yoga with Adriene",
-    does: "A warm voice, a free front door, and a repeating challenge. The paid library is about $13 a month.",
-    skip: "Do not try to film hundreds of free classes.",
-  },
-  {
-    name: "Yoga with Kassandra",
-    does: "Short, consistent classes and a library people can return to.",
-    skip: "Do not drop the live hour. That is the part they mostly do not offer.",
-  },
-  {
-    name: "Cat Meffan",
-    does: "The closer UK example: challenges, a community, and one clear next purchase.",
-    skip: "Do not launch a new offer every week. One course a month is enough.",
+    name: "Month 6",
+    line: "20 paying subscribers. Ten is the first win. Twenty is the next rung.",
   },
 ];
 
 const months = [
   {
     month: "Month 1",
-    line: "Four classes recorded from the home studio, even if nobody buys. The community area is open. A Google profile. No ads.",
+    line: "Record the class at home every week, and teach it again on Thursday. PG-13 is the course campaign. YOU-GA can be the first of two events.",
   },
   {
     month: "Month 2",
-    line: "The Friday email and the two clips become a habit. Subscribers are offered Thursday first.",
+    line: "The week of clips, email, and journal does not slip. The list reaches 10 paying subscribers.",
   },
   {
     month: "Month 3",
-    line: "Point people at the £10 week. PG-13 is the course on the shelf.",
+    line: "A new course is the month’s campaign. Keep adding one or two people a week. The Thursday room moves toward 8.",
   },
   {
     month: "Month 4",
-    line: "One in-person event, and the next course. Keep recording every week.",
+    line: "The second event is planned here or in month 5. Mention it for the three weeks before it, inside the same weekly posts.",
   },
   {
     month: "Month 5",
-    line: "Write the next posts from the phrases people actually searched. Keep the week.",
+    line: "Another course. The list should be climbing from 10 toward 20. A full Thursday room is 8, not a second count of the same people.",
   },
   {
     month: "Month 6",
-    line: "Review. Success is money taken, and a library that got longer. Keep what brought people in.",
+    line: "Review. The win to keep is 20 paying subscribers, a library that got longer, and two events, not twelve.",
   },
 ];
 
 const week = [
   {
-    step: "Recording day",
-    title: "Home studio",
-    detail: "The £10 class is recorded even if nobody is watching live. The day is still open, so it does not sit on top of Thursday.",
+    step: "Home studio",
+    title: "Record the class",
+    detail: "The online version of this week’s class. It is recorded even if nobody is watching.",
   },
   {
     step: "Thursday",
-    title: "Eight spaces",
-    detail: "The Yoga Tree in Stirling. Subscribers are asked first. This hour is not the subscriber film.",
+    title: "Teach it again",
+    detail: "The same class, in person, at The Yoga Tree. Eight places.",
+  },
+  {
+    step: "Public",
+    title: "Three clips",
+    detail: "Cut from those two teachings. Instagram and TikTok get the same three.",
   },
   {
     step: "Friday",
-    title: "Two clips",
-    detail: "Short vertical films, cut from that week’s home-studio recording.",
-  },
-  {
-    step: "Friday",
-    title: "Email",
-    detail: "Where the class was, one idea, and one link back to the £10 week.",
+    title: "Email and journal",
+    detail: "One idea, two lengths. The email is short. The journal is the longer one.",
   },
 ];
 
-const places = [
-  {
-    name: "The Yoga Tree",
-    line: "Thursday, eight people, in their room in Stirling. Not another Monday. Not her house.",
-  },
-  {
-    name: "Home studio",
-    line: "The garden studio is for the camera: the weekly class, and workshop recordings. A group does not come there for a class.",
-  },
-  {
-    name: "The van",
-    line: "Only when she is already away. The awning, the inverter, and Starlink still cover a wet week on the road.",
-  },
-  {
-    name: "A 1-2-1",
-    line: "The only in-person teaching at home. Everyone else in person is at The Yoga Tree, or at the monthly event.",
-  },
-];
-
-const funnel = [
-  {
-    step: "1",
-    title: "A short clip",
-    line: "Someone sees the place, or a few seconds of the class. That is the fuel.",
-  },
-  {
-    step: "2",
-    title: "The website",
-    line: "The site is the engine. It holds the offers and takes the booking.",
-  },
-  {
-    step: "3",
-    title: "The £10 week",
-    line: "The first ask. Live or later, and the library grows every week.",
-  },
-  {
-    step: "4",
-    title: "Then the rest",
-    line: "A course once a month, one in-person event a month, or a Thursday space. Subscribers get first pick of the eight.",
-  },
-];
-
-const subjects = [
-  "The class from the studio this week",
-  "What we kept, and what we left out",
-  "A rope, not a snake",
-  "Shame does not belong on the mat",
-  "Love and light, without the sugar",
-  "Your body, your practice",
-  "One hour, then the recording",
-  "Eight spaces on Thursday",
-];
-
-const topics = [
-  { group: "Place", items: ["The studio in the garden", "The van, on a week away", "Thursday at The Yoga Tree"] },
-  { group: "Teaching", items: ["The mat as a mirror", "Shame and the pose", "Love and light, plainly"] },
-  { group: "Search", items: ["Online yoga Stirling", "Yoga for real bodies", "Yoga philosophy for beginners"] },
-];
-
-const accounts = [
+const fuel = [
   {
     name: "Instagram",
-    href: site.social.instagram,
-    handle: "@headandheartyoga",
-    size: "Followers and views are private until Insights is opened.",
-    note: "Best place for the two short clips. People already looking for yoga.",
-  },
-  {
-    name: "Facebook",
-    href: site.social.facebook,
-    handle: "Head & Heart Yoga",
-    size: "Page likes and reach are private until Insights is opened.",
-    note: "Worth one post of the same clip, for the people already following the page.",
+    count: "3 clips and 4 stories",
+    line: "Each one ends on the £10 week. Once a month, one clip points at that month’s course instead.",
   },
   {
     name: "TikTok",
-    href: site.social.tiktok,
-    handle: "@headandheartyoga",
-    size: "390 followers. 1,535 accounts followed. 997 likes, public, October 2026.",
-    note: "A small account. The bio already points at the site. One clip a week is enough while the library is the main job.",
+    count: "The same 3 clips",
+    line: "Posted there too. Not three new films.",
+  },
+  {
+    name: "Email",
+    count: "1, on Friday",
+    line: "One idea, one link. This is how Thursday spaces and the course are offered.",
+  },
+  {
+    name: "Journal",
+    count: "1 post",
+    line: "The same idea as the email, written longer.",
   },
 ];
 
-const settled = [
-  "Thursday at The Yoga Tree, eight spaces. Not Monday, and not at her house.",
-  "The home studio is for recording the weekly class and workshops.",
-  "The van is only for a week she is already away.",
-  "A 1-2-1 is the only in-person teaching at home.",
-  "The £10 class is recorded every week, even if nobody watches live.",
-  "Three offers: the weekly class and library, one course a month, one in-person event a month.",
-  "A £10 subscriber is offered a Thursday space before anyone else.",
-  "The community area is open to look around. A sign-in comes when there are members.",
-];
-
-const open = [
-  "What the eight Thursday spaces cost. Until then, people ask. No guessed price on the site.",
-  "The Thursday time at The Yoga Tree.",
-  "Which day she records at home, so it does not sit on top of the Yoga Tree class.",
-  "Whether she is comfortable livestreaming with one camera framed on her only. The people in the room stay out of the picture. That is the setup for the home studio. The same camera could put Thursday on the stream without filming the eight students. Until she says yes, the Yoga Tree class is not the subscriber stream.",
+const eightWeeks = [
+  "24 clips",
+  "32 stories",
+  "8 emails",
+  "8 journal posts",
 ];
 
 export default function MarketingPage() {
@@ -210,61 +111,99 @@ export default function MarketingPage() {
     <article className="section-pad pt-32 md:pt-40">
       <div className="site-container">
         <p className="text-[0.72rem] tracking-[0.2em] text-rosewood uppercase">
-          After the meeting
+          For Vicky
         </p>
         <h1 className="mt-3 max-w-3xl font-display text-[clamp(2.6rem,5vw,4.2rem)] leading-[1.05]">
-          A plan for the next six months
+          Ten people in two months
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
-          The old site has taken no money. That is the starting line. There is
-          no budget for ads, so this six months is the proof. If the site takes
-          money, that is the case for a retainer. Until then, the work is the
-          case study.
+          The old site has taken no money. Ten paying subscribers by the end of
+          month 2 is the first win. Twenty by month 6 is the next rung. The
+          Thursday room is a target of 8 every week. Those 8 are part of the
+          list, not a second list.
         </p>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
-          Three offers. A class recorded every week, whether or not anyone is
-          watching. A course released once a month. An in-person event once a
-          month.
+          The site can take the £10. Nobody arrives unless the week goes out.
+          Build it and they will come does not work.
         </p>
 
         <section className="mt-16">
           <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
-            In ordinary words
+            The offer
           </p>
-          <h2 className="mt-3 font-display text-3xl">The engine and the fuel</h2>
+          <h2 className="mt-3 font-display text-3xl">One membership</h2>
           <p className="mt-3 max-w-2xl text-ink-soft">
-            A clip, a journal post, or the Friday email brings a person to the
-            site. That is the fuel. The site is the engine: it holds the offers
-            and takes the booking. The{" "}
-            <Link href="/community" className="text-rosewood underline-offset-4 hover:underline">
-              community area
-            </Link>{" "}
-            is where that person comes back. The door is open for now. A sign-in
-            comes when there are members.
+            £10 a week is one list. Someone who comes on Thursday gets the
+            online class and the catch-up. Someone who joins online can take a
+            Thursday space. Vicky teaches that same class twice.
           </p>
-          <ol className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {funnel.map((item) => (
-              <li key={item.step} className="rounded-[1.25rem] bg-white/80 p-5">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rosewood text-sm text-white">
-                  {item.step}
-                </span>
-                <p className="mt-4 font-display text-2xl">{item.title}</p>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.line}</p>
-              </li>
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <article className="rounded-[1.25rem] bg-white/80 p-5">
+              <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">
+                At home
+              </p>
+              <h3 className="mt-3 font-display text-2xl">Recorded for online</h3>
+              <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+                The garden studio. The class is recorded even if the live room
+                is empty. The van is only for a week she is already away.
+              </p>
+            </article>
+            <article className="rounded-[1.25rem] bg-white/80 p-5">
+              <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">
+                Thursday
+              </p>
+              <h3 className="mt-3 font-display text-2xl">Eight at The Yoga Tree</h3>
+              <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+                The same class, in their room in Stirling. Not another Monday.
+                A group does not come to the house. A 1-2-1 is the only
+                in-person teaching at home.
+              </p>
+            </article>
+          </div>
+          <p className="mt-4 max-w-2xl text-sm text-ink-soft">
+            The 8 places can be taken with the £10 week, or booked as a one-off
+            on the site. A one-off is a single Thursday. The working price is
+            £15, so four drop-ins cost more than staying on the week. That
+            price is not on a checkout until Vicky confirms it.{" "}
+            <Link href="/live" className="text-rosewood underline-offset-4 hover:underline">
+              The weekly class page
+            </Link>{" "}
+            is where the £10 is said.
+          </p>
+        </section>
+
+        <section className="mt-16">
+          <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
+            The numbers
+          </p>
+          <h2 className="mt-3 font-display text-3xl">What a win is</h2>
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {targets.map((item) => (
+              <article key={item.name} className="rounded-[1.25rem] border border-sage/25 p-5">
+                <h3 className="font-display text-2xl">{item.name}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{item.line}</p>
+              </article>
             ))}
-          </ol>
+          </div>
+          <p className="mt-6 max-w-2xl text-ink-soft">
+            Ten people at £10 is about £100 a week once they are all on.
+            Joining across eight weeks means the first two months take less
+            than £800. One course is the campaign every month. PG-13 is month
+            one. Events are two in the six months, not one a month. YOU-GA on
+            24 October can be the first. The second sits around month 4 or 5.
+          </p>
         </section>
 
         <section className="mt-16">
           <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
             Six months
           </p>
-          <h2 className="mt-3 font-display text-3xl">The path</h2>
+          <h2 className="mt-3 font-display text-3xl">The path to 20</h2>
           <ol className="mt-8 grid gap-4 md:grid-cols-3 xl:grid-cols-6">
             {months.map((item, index) => (
               <li
                 key={item.month}
-                className="relative rounded-[1.25rem] border border-sage/25 bg-white/80 p-4"
+                className="rounded-[1.25rem] border border-sage/25 bg-white/80 p-4"
               >
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rosewood text-sm text-white">
                   {index + 1}
@@ -276,38 +215,13 @@ export default function MarketingPage() {
               </li>
             ))}
           </ol>
-          <p className="mt-6 max-w-2xl text-ink-soft">
-            The Thursday room is full when eight people have paid. Follower
-            counts stay secondary. A quiet account with a class people can join
-            beats a busy account that never asks.
-          </p>
-        </section>
-
-        <section className="mt-16">
-          <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
-            The rooms
-          </p>
-          <h2 className="mt-3 font-display text-3xl">Two places, two jobs</h2>
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {places.map((place) => (
-              <article key={place.name} className="rounded-[1.25rem] bg-white/80 p-5">
-                <h3 className="font-display text-2xl">{place.name}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{place.line}</p>
-              </article>
-            ))}
-          </div>
-          <p className="mt-4 max-w-2xl text-sm text-rosewood">
-            On a van week, the wind-out awning stays out in the rain. Cameras sit
-            inside the dry van. The inverter and Starlink run the class without
-            a hookup or a phone signal.
-          </p>
         </section>
 
         <section className="mt-16">
           <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
             Every week
           </p>
-          <h2 className="mt-3 font-display text-3xl">The routine</h2>
+          <h2 className="mt-3 font-display text-3xl">Teach it twice, then publish</h2>
           <ol className="mt-8 grid gap-3 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] md:items-stretch">
             {week.map((item, index) => (
               <li key={item.title} className="contents">
@@ -333,198 +247,80 @@ export default function MarketingPage() {
 
         <section className="mt-16">
           <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
-            £200 a month
+            The fuel
           </p>
-          <h2 className="mt-3 font-display text-3xl">What Vicky sends</h2>
+          <h2 className="mt-3 font-display text-3xl">What has to go out</h2>
           <p className="mt-3 max-w-2xl text-ink-soft">
-            There is no ad spend in this. £200 covers editing, the library, the
-            email, and posting. It does not cover her showing up, or deciding
-            what the class was about. The six months only happen if the
-            recording arrives.
-          </p>
-          <div className="mt-8 grid gap-4 lg:grid-cols-3">
-            <article className="rounded-[1.25rem] bg-white/80 p-5">
-              <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">Once</p>
-              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-ink-soft">
-                <li>Access to YouTube, Instagram, TikTok, the email tool, and the Google Business Profile.</li>
-                <li>Three photos she is happy to use.</li>
-                <li>A yes or no on her face, the van, and any place she will not name.</li>
-                <li>How the awning, the inverter, and the lights are stowed, for the weeks she is away.</li>
-              </ul>
-            </article>
-            <article className="rounded-[1.25rem] bg-white/80 p-5">
-              <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">Every recording</p>
-              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-ink-soft">
-                <li>The raw class recording, from the home studio, or from the van if she is away.</li>
-                <li>A phone clip of the place.</li>
-                <li>The place name, in a few words.</li>
-                <li>A voice note of two minutes at most: the one idea she wants people to remember.</li>
-              </ul>
-            </article>
-            <article className="rounded-[1.25rem] bg-white/80 p-5">
-              <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">Only when she has them</p>
-              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-ink-soft">
-                <li>A short quote a student sends her.</li>
-                <li>A change of date, price, or workshop.</li>
-                <li>Nothing else is required for the week to go out.</li>
-              </ul>
-            </article>
-          </div>
-          <p className="mt-6 max-w-2xl text-sm leading-relaxed text-ink-soft">
-            From that bundle: one class in the library, two clips, a journal
-            note, and an email drafted for Friday. She approves in one reply, or
-            it goes out as drafted if she has not replied by Friday morning. She
-            doesn’t need to write the post, cut the film, or design the email.
-          </p>
-        </section>
-
-        <section className="mt-16">
-          <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
-            Central Belt
-          </p>
-          <h2 className="mt-3 font-display text-3xl">Who is already here</h2>
-          <p className="mt-3 max-w-2xl text-ink-soft">
-            A scan of public class pages, not a census. Prices sit around £7–£15
-            a class, or a block of four to six weeks.
+            The films are cut from the two teachings. She does not write four
+            posts. Below this volume, ten subscribers is a hope.
           </p>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {studios.map((studio) => (
-              <article key={studio.name} className="rounded-[1.25rem] bg-white/80 p-5">
-                <h3 className="font-display text-2xl">{studio.name}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{studio.does}</p>
-                <p className="mt-3 text-sm leading-relaxed text-rosewood">{studio.skip}</p>
+            {fuel.map((item) => (
+              <article key={item.name} className="rounded-[1.25rem] bg-white/80 p-5">
+                <p className="text-[0.72rem] tracking-[0.14em] text-sage uppercase">{item.name}</p>
+                <h3 className="mt-3 font-display text-2xl">{item.count}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{item.line}</p>
               </article>
             ))}
           </div>
-        </section>
-
-        <section className="mt-16">
-          <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
-            Online teachers
-          </p>
-          <h2 className="mt-3 font-display text-3xl">What to learn, not copy</h2>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {teachers.map((teacher) => (
-              <article key={teacher.name} className="rounded-[1.25rem] border border-sage/25 p-5">
-                <h3 className="font-display text-2xl">{teacher.name}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{teacher.does}</p>
-                <p className="mt-3 text-sm leading-relaxed text-rosewood">{teacher.skip}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="mt-16">
-          <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
-            The accounts
-          </p>
-          <h2 className="mt-3 font-display text-3xl">Small, and that is fine</h2>
-          <p className="mt-3 max-w-2xl text-ink-soft">
-            The job of a clip is a visit to the £10 class, not a follower count.
-            Instagram and Facebook hide their numbers. TikTok does not.
-          </p>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {accounts.map((account) => (
-              <article key={account.name} className="rounded-[1.25rem] bg-white/80 p-5">
-                <h3 className="font-display text-2xl">{account.name}</h3>
-                <a
-                  href={account.href}
-                  className="mt-2 block text-sm text-rosewood underline decoration-rosewood/30 underline-offset-4"
-                >
-                  {account.handle}
-                </a>
-                <p className="mt-4 text-sm leading-relaxed text-ink">{account.size}</p>
-                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{account.note}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="mt-16 grid gap-10 lg:grid-cols-2">
-          <div>
-            <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
-              Newsletter
-            </p>
-            <h2 className="mt-3 font-display text-3xl">Eight first subjects</h2>
-            <p className="mt-3 text-ink-soft">
-              One email a week, on Friday. Where the class was, one idea, one link.
-            </p>
-            <ol className="mt-6 space-y-2">
-              {subjects.map((subject, index) => (
-                <li key={subject} className="flex gap-3 text-ink">
-                  <span className="text-rosewood">{index + 1}</span>
-                  <span>{subject}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
-          <div>
-            <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
-              Journal
-            </p>
-            <h2 className="mt-3 font-display text-3xl">The rotation</h2>
-            <p className="mt-3 text-ink-soft">One post a week, for six months, drafted from the voice note.</p>
-            <div className="mt-6 grid gap-4">
-              {topics.map((topic) => (
-                <article key={topic.group} className="rounded-[1.25rem] bg-white/80 p-5">
-                  <p className="text-[0.72rem] tracking-[0.14em] text-sage uppercase">
-                    {topic.group}
-                  </p>
-                  <ul className="mt-3 space-y-1 text-ink">
-                    {topic.items.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="mt-16">
-          <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
-            Search
-          </p>
-          <h2 className="mt-3 font-display text-3xl">Be findable, then be patient</h2>
-          <ul className="mt-6 grid gap-3 md:grid-cols-3">
-            {[
-              "Claim a Google Business Profile for Stirling.",
-              "Give each public page one plain title and description.",
-              "Write the journal posts around the phrases above. No ads in month one.",
-            ].map((item) => (
-              <li key={item} className="rounded-[1.25rem] border border-sage/25 p-5 text-ink-soft">
+          <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {eightWeeks.map((item) => (
+              <li
+                key={item}
+                className="rounded-[1.25rem] border border-sage/25 px-5 py-4 font-display text-2xl"
+              >
                 {item}
+                <span className="mt-1 block text-sm font-sans text-ink-soft">
+                  in the eight weeks to the first win
+                </span>
               </li>
             ))}
           </ul>
+          <p className="mt-4 max-w-2xl text-sm text-ink-soft">
+            Each of the two events is mentioned for the three weeks before it,
+            inside this same week. It is not a new content machine.
+          </p>
         </section>
 
-        <section className="mt-16 grid gap-4 lg:grid-cols-2">
-          <div className="rounded-[1.5rem] bg-sage-deep px-6 py-8 text-white md:px-10">
-            <p className="text-[0.72rem] tracking-[0.2em] text-sky-soft uppercase">
-              Settled
-            </p>
-            <h2 className="mt-3 font-display text-3xl">From the meeting</h2>
-            <ul className="mt-6 space-y-3">
-              {settled.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+        <section className="mt-16">
+          <p className="text-[0.72rem] tracking-[0.2em] text-sage uppercase">
+            What she sends
+          </p>
+          <h2 className="mt-3 font-display text-3xl">Twice, then one note</h2>
+          <div className="mt-8 grid gap-4 lg:grid-cols-3">
+            <article className="rounded-[1.25rem] bg-white/80 p-5">
+              <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">Home studio</p>
+              <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+                The raw recording of the online class, every week.
+              </p>
+            </article>
+            <article className="rounded-[1.25rem] bg-white/80 p-5">
+              <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">Thursday</p>
+              <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+                A short phone clip from The Yoga Tree. The place, in a few words.
+              </p>
+            </article>
+            <article className="rounded-[1.25rem] bg-white/80 p-5">
+              <p className="text-[0.72rem] tracking-[0.14em] text-rosewood uppercase">One voice note</p>
+              <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+                Two minutes. The one idea for the email and the journal. She
+                doesn’t need to write, cut, or design.
+              </p>
+            </article>
           </div>
-          <div className="rounded-[1.5rem] border border-sage/25 px-6 py-8 md:px-10">
-            <p className="text-[0.72rem] tracking-[0.2em] text-rosewood uppercase">
-              Still open
-            </p>
-            <h2 className="mt-3 font-display text-3xl">Ask Vicky</h2>
-            <ol className="mt-6 space-y-3 text-ink-soft">
-              {open.map((item, index) => (
-                <li key={item} className="flex gap-3">
-                  <span className="text-rosewood">{index + 1}</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
+        </section>
+
+        <section className="mt-16 rounded-[1.5rem] bg-sage-deep px-6 py-8 text-white md:px-10">
+          <p className="text-[0.72rem] tracking-[0.2em] text-sky-soft uppercase">
+            The test
+          </p>
+          <h2 className="mt-3 font-display text-3xl">Month 2, then month 6</h2>
+          <ul className="mt-6 space-y-3 text-lg">
+            <li>10 paying subscribers by the end of month 2.</li>
+            <li>20 paying subscribers by month 6.</li>
+            <li>Thursday aimed at 8, without counting those 8 twice.</li>
+            <li>Six monthly courses. Two events. A library that got longer every week.</li>
+          </ul>
         </section>
       </div>
     </article>
