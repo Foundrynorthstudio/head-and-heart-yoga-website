@@ -55,7 +55,7 @@ export default function BasketPage() {
         {items.length === 0 ? (
           <p className="mt-5 text-lg text-ink-soft">
             The basket is empty.{" "}
-            <Link href="/live" className="text-rosewood underline-offset-4 hover:underline">
+            <Link href="/join" className="text-rosewood underline-offset-4 hover:underline">
               Join
             </Link>{" "}
             or browse the{" "}

@@ -63,7 +63,7 @@ export function Header() {
           >
             Community
           </Link>
-          <Link href="/live" className="btn">
+          <Link href="/join" className="btn">
             Join
           </Link>
         </div>
@@ -108,7 +108,7 @@ export function Header() {
             <Link href="/community" className="btn btn-quiet">
               Community
             </Link>
-            <Link href="/live" className="btn">
+            <Link href="/join" className="btn">
               Join
             </Link>
           </div>
